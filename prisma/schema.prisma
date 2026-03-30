@@ -1,0 +1,185 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  ADMIN
+  TEACHER
+  STUDENT
+  PARENT
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  student Student?
+  teacher Teacher?
+
+  // Parent relation
+  parentChildren ParentChild[]
+
+  // Notifications received
+  notifications Notification[]
+
+  // Complaints created (by teacher)
+  complaintsCreated Complaint[]    @relation("ComplaintCreator")
+  // Complaint responses (by parent)
+  complaintResponses ComplaintResponse[]
+}
+
+model Student {
+  id        String   @id @default(uuid())
+  studentId String   @unique
+  phone     String?
+  address   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId  String @unique
+  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  classId String
+  class   Class  @relation(fields: [classId], references: [id])
+
+  attendances  Attendance[]
+  complaints   Complaint[]
+  parentLinks  ParentChild[]
+}
+
+model Teacher {
+  id        String   @id @default(uuid())
+  teacherId String   @unique
+  phone     String?
+  subject   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId  String  @unique
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  classes Class[]
+  exams   Exam[]
+}
+
+model Class {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  section   String?
+  grade     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  teacherId String?
+  teacher   Teacher? @relation(fields: [teacherId], references: [id])
+
+  students    Student[]
+  attendances Attendance[]
+  exams       Exam[]
+}
+
+// Parent-Child relationship
+model ParentChild {
+  id        String @id @default(uuid())
+  parentId  String
+  parent    User   @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([parentId, studentId])
+}
+
+model Attendance {
+  id        String   @id @default(uuid())
+  date      DateTime
+  status    AttendanceStatus
+  createdAt DateTime @default(now())
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  classId   String
+  class     Class  @relation(fields: [classId], references: [id])
+
+  @@unique([studentId, date])
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  LATE
+}
+
+model Complaint {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Teacher who created the complaint
+  createdById String
+  createdBy   User    @relation("ComplaintCreator", fields: [createdById], references: [id])
+
+  // Student the complaint is about
+  studentId   String
+  student     Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  responses   ComplaintResponse[]
+}
+
+model ComplaintResponse {
+  id        String   @id @default(uuid())
+  message   String
+  createdAt DateTime @default(now())
+
+  complaintId String
+  complaint   Complaint @relation(fields: [complaintId], references: [id], onDelete: Cascade)
+
+  // User who responded (parent or admin)
+  userId    String
+  user      User   @relation(fields: [userId], references: [id])
+}
+
+model Exam {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  date        DateTime
+  createdAt   DateTime @default(now())
+
+  classId   String
+  class     Class  @relation(fields: [classId], references: [id])
+
+  teacherId String
+  teacher   Teacher @relation(fields: [teacherId], references: [id])
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  type      NotificationType
+  createdAt DateTime @default(now())
+
+  userId    String
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum NotificationType {
+  EXAM
+  COMPLAINT
+  ATTENDANCE
+  GENERAL
+}
