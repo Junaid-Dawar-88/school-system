@@ -45,6 +45,7 @@ export type ComplaintVisibility = (typeof ComplaintVisibility)[keyof typeof Comp
 
 export const NotificationType = {
   COMPLAINT: 'COMPLAINT',
+  EXAM: 'EXAM',
   GENERAL: 'GENERAL'
 } as const
 

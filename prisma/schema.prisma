@@ -29,6 +29,7 @@ model Organization {
   attendances    Attendance[]
   complaints     Complaint[]
   notifications  Notification[]
+  exams          Exam[]
 }
 
 // ─── User ────────────────────────────────────────────────────
@@ -53,6 +54,7 @@ model User {
   complaintsCreated Complaint[]      @relation("ComplaintCreator")
   complaintReplies  ComplaintReply[]
   notifications     Notification[]
+  exams             Exam[]
 }
 
 // ─── Class ───────────────────────────────────────────────────
@@ -66,6 +68,7 @@ model Class {
   teachers    ClassTeacher[]
   students    Student[]
   attendances Attendance[]
+  exams       Exam[]
 
   createdAt DateTime @default(now())
 
@@ -183,6 +186,27 @@ model ComplaintReply {
   createdAt DateTime @default(now())
 }
 
+// ─── Exam / Test ─────────────────────────────────────────────
+model Exam {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  date        DateTime
+  subject     String
+
+  classId String
+  class   Class  @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  createdById String
+  createdBy   User   @relation(fields: [createdById], references: [id])
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 // ─── Notification ────────────────────────────────────────────
 model Notification {
   id      String           @id @default(uuid())
@@ -202,5 +226,6 @@ model Notification {
 
 enum NotificationType {
   COMPLAINT
+  EXAM
   GENERAL
 }

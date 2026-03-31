@@ -59,6 +59,7 @@ export const ModelName = {
   Attendance: 'Attendance',
   Complaint: 'Complaint',
   ComplaintReply: 'ComplaintReply',
+  Exam: 'Exam',
   Notification: 'Notification'
 } as const
 
@@ -178,6 +179,22 @@ export const ComplaintReplyScalarFieldEnum = {
 } as const
 
 export type ComplaintReplyScalarFieldEnum = (typeof ComplaintReplyScalarFieldEnum)[keyof typeof ComplaintReplyScalarFieldEnum]
+
+
+export const ExamScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  date: 'date',
+  subject: 'subject',
+  classId: 'classId',
+  createdById: 'createdById',
+  organizationId: 'organizationId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ExamScalarFieldEnum = (typeof ExamScalarFieldEnum)[keyof typeof ExamScalarFieldEnum]
 
 
 export const NotificationScalarFieldEnum = {
