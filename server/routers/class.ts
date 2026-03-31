@@ -1,6 +1,7 @@
 import { z } from "zod/v4";
 import { router, protectedProcedure, adminProcedure } from "../trpc";
 import { prisma } from "@/lib/prisma";
+import { TRPCError } from "@trpc/server";
 
 export const classRouter = router({
   list: protectedProcedure.query(async ({ ctx }) => {
@@ -52,18 +53,30 @@ export const classRouter = router({
       })).min(1),
     }))
     .mutation(async ({ input, ctx }) => {
+      // Check if class name already exists in this org
+      const existing = await prisma.class.findFirst({
+        where: { name: input.name, organizationId: ctx.user.organizationId },
+      });
+      if (existing) throw new TRPCError({ code: "CONFLICT", message: "A class with this name already exists" });
+
+      console.log("[class.create] Input:", JSON.stringify(input));
+      console.log("[class.create] OrgId:", ctx.user.organizationId);
+
       const cls = await prisma.class.create({
         data: {
           name: input.name,
           organizationId: ctx.user.organizationId,
         },
       });
+      console.log("[class.create] Class created:", cls.id);
 
       for (const t of input.teachers) {
+        console.log("[class.create] Adding teacher:", t.teacherId, "subject:", t.subject);
         await prisma.classTeacher.create({
           data: { classId: cls.id, teacherId: t.teacherId, subject: t.subject },
         });
       }
+      console.log("[class.create] Done, teachers assigned:", input.teachers.length);
 
       return cls;
     }),
