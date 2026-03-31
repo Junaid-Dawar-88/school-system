@@ -46,42 +46,49 @@ export const examRouter = router({
         if (!assignment) throw new TRPCError({ code: "FORBIDDEN", message: "Not your class" });
       }
 
-      const exam = await prisma.exam.create({
-        data: {
-          title: input.title,
-          description: input.description,
-          date: new Date(input.date),
-          subject: input.subject,
-          classId: input.classId,
-          createdById: ctx.user.id,
-          organizationId: orgId,
-        },
-        include: { class: true },
-      });
+      console.log("[exam.create] Input:", JSON.stringify(input));
+      console.log("[exam.create] OrgId:", orgId, "UserId:", ctx.user.id);
 
-      // Notify parents of students in this class
-      const students = await prisma.student.findMany({
-        where: { classId: input.classId, parentId: { not: null } },
-        select: { parentId: true },
-      });
-      const parentIds = [...new Set(students.map((s) => s.parentId!))];
-
-      // Notify all org users except creator
-      const allUsers = await prisma.user.findMany({
-        where: { organizationId: orgId, NOT: { id: ctx.user.id } },
-        select: { id: true },
-      });
-
-      for (const u of allUsers) {
-        await prisma.notification.create({
+      let exam;
+      try {
+        exam = await prisma.exam.create({
           data: {
-            userId: u.id,
-            title: `New Exam: ${input.title}`,
-            message: `${exam.class.name} — ${input.subject} — ${new Date(input.date).toLocaleDateString()}`,
-            type: "EXAM",
+            title: input.title,
+            description: input.description || null,
+            date: new Date(input.date),
+            subject: input.subject,
+            classId: input.classId,
+            createdById: ctx.user.id,
             organizationId: orgId,
           },
         });
+        console.log("[exam.create] Success:", exam.id);
+      } catch (err) {
+        console.error("[exam.create] DB Error:", err);
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Failed to create exam. Check server logs." });
+      }
+
+      // Notify all org users (non-blocking)
+      try {
+        const cls = await prisma.class.findUnique({ where: { id: input.classId }, select: { name: true } });
+        const allUsers = await prisma.user.findMany({
+          where: { organizationId: orgId, NOT: { id: ctx.user.id } },
+          select: { id: true },
+        });
+
+        for (const u of allUsers) {
+          await prisma.notification.create({
+            data: {
+              userId: u.id,
+              title: `New Exam: ${input.title}`,
+              message: `${cls?.name || "Class"} — ${input.subject} — ${new Date(input.date).toLocaleDateString()}`,
+              type: "GENERAL",
+              organizationId: orgId,
+            },
+          });
+        }
+      } catch (err) {
+        console.error("[exam.create] Notification error (non-fatal):", err);
       }
 
       return exam;
