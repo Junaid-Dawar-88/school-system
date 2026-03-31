@@ -47,6 +47,7 @@ export async function registerParentAction(formData: FormData) {
   const inviteCode = formData.get("inviteCode") as string;
 
   if (!name || !email || !password || !inviteCode) return { error: "All fields are required" };
+  if (password.length < 6) return { error: "Password must be at least 6 characters" };
 
   const org = await prisma.organization.findUnique({ where: { inviteCode } });
   if (!org) return { error: "Invalid invite code. Check with your school admin." };

@@ -29,36 +29,34 @@ model Organization {
   attendances    Attendance[]
   complaints     Complaint[]
   notifications  Notification[]
+  exams          Exam[]
 }
 
 // ─── User ────────────────────────────────────────────────────
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  password  String
-  name      String
-  role      Role
-  subject   String?
-  loginCode String?  @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id             String   @id @default(uuid())
+  email          String   @unique
+  password       String
+  name           String
+  role           Role
+  subject        String?
+  loginCode      String?  @unique
+  resetToken     String?  @unique
+  resetTokenExp  DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 
   organizationId String?
   organization   Organization? @relation("OrgMembers", fields: [organizationId], references: [id])
 
   ownedOrg Organization? @relation("OrgOwner")
 
-  // Teacher relations (many-to-many via ClassTeacher)
   classAssignments ClassTeacher[]
-
-  // Parent relations
-  students Student[]
-
-  // Complaints & replies
+  students         Student[]
   complaintsCreated Complaint[]      @relation("ComplaintCreator")
   complaintReplies  ComplaintReply[]
-
-  notifications Notification[]
+  notifications     Notification[]
+  exams             Exam[]
 }
 
 // ─── Class ───────────────────────────────────────────────────
@@ -72,13 +70,14 @@ model Class {
   teachers    ClassTeacher[]
   students    Student[]
   attendances Attendance[]
+  exams       Exam[]
 
   createdAt DateTime @default(now())
 
   @@unique([name, organizationId])
 }
 
-// ─── Class-Teacher (many-to-many with subject) ───────────────
+// ─── Class-Teacher ───────────────────────────────────────────
 model ClassTeacher {
   id      String @id @default(uuid())
   subject String
@@ -146,16 +145,15 @@ model Complaint {
   id         String              @id @default(uuid())
   message    String
   type       ComplaintType
+  status     ComplaintStatus     @default(OPEN)
   visibility ComplaintVisibility @default(PUBLIC)
 
   createdById String
   createdBy   User   @relation("ComplaintCreator", fields: [createdById], references: [id])
 
-  // For STUDENT complaints (teacher complains about student)
   studentId String?
   student   Student? @relation("ComplaintStudent", fields: [studentId], references: [id], onDelete: Cascade)
 
-  // For TEACHER complaints (parent complains about teacher)
   teacherId String?
 
   organizationId String
@@ -170,6 +168,11 @@ model Complaint {
 enum ComplaintType {
   ABOUT_STUDENT
   ABOUT_TEACHER
+}
+
+enum ComplaintStatus {
+  OPEN
+  RESOLVED
 }
 
 enum ComplaintVisibility {
@@ -187,6 +190,25 @@ model ComplaintReply {
 
   userId String
   user   User   @relation(fields: [userId], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+// ─── Exam ────────────────────────────────────────────────────
+model Exam {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  date        DateTime
+
+  classId String
+  class   Class  @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  createdById String
+  createdBy   User   @relation(fields: [createdById], references: [id])
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
 }
@@ -210,5 +232,7 @@ model Notification {
 
 enum NotificationType {
   COMPLAINT
+  EXAM
+  ATTENDANCE
   GENERAL
 }

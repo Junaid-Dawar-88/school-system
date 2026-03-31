@@ -15,6 +15,8 @@ export default function RegisterPage() {
     e.preventDefault();
     setError("");
     const fd = new FormData(e.currentTarget);
+    const pw = fd.get("password") as string;
+    if (pw.length < 6) { setError("Password must be at least 6 characters"); return; }
     startTransition(async () => { const res = await registerParentAction(fd); if (res?.error) setError(res.error); });
   }
 

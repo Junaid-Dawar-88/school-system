@@ -32,6 +32,8 @@ export type UserMinAggregateOutputType = {
   role: $Enums.Role | null
   subject: string | null
   loginCode: string | null
+  resetToken: string | null
+  resetTokenExp: Date | null
   createdAt: Date | null
   updatedAt: Date | null
   organizationId: string | null
@@ -45,6 +47,8 @@ export type UserMaxAggregateOutputType = {
   role: $Enums.Role | null
   subject: string | null
   loginCode: string | null
+  resetToken: string | null
+  resetTokenExp: Date | null
   createdAt: Date | null
   updatedAt: Date | null
   organizationId: string | null
@@ -58,6 +62,8 @@ export type UserCountAggregateOutputType = {
   role: number
   subject: number
   loginCode: number
+  resetToken: number
+  resetTokenExp: number
   createdAt: number
   updatedAt: number
   organizationId: number
@@ -73,6 +79,8 @@ export type UserMinAggregateInputType = {
   role?: true
   subject?: true
   loginCode?: true
+  resetToken?: true
+  resetTokenExp?: true
   createdAt?: true
   updatedAt?: true
   organizationId?: true
@@ -86,6 +94,8 @@ export type UserMaxAggregateInputType = {
   role?: true
   subject?: true
   loginCode?: true
+  resetToken?: true
+  resetTokenExp?: true
   createdAt?: true
   updatedAt?: true
   organizationId?: true
@@ -99,6 +109,8 @@ export type UserCountAggregateInputType = {
   role?: true
   subject?: true
   loginCode?: true
+  resetToken?: true
+  resetTokenExp?: true
   createdAt?: true
   updatedAt?: true
   organizationId?: true
@@ -185,6 +197,8 @@ export type UserGroupByOutputType = {
   role: $Enums.Role
   subject: string | null
   loginCode: string | null
+  resetToken: string | null
+  resetTokenExp: Date | null
   createdAt: Date
   updatedAt: Date
   organizationId: string | null
@@ -219,6 +233,8 @@ export type UserWhereInput = {
   role?: Prisma.EnumRoleFilter<"User"> | $Enums.Role
   subject?: Prisma.StringNullableFilter<"User"> | string | null
   loginCode?: Prisma.StringNullableFilter<"User"> | string | null
+  resetToken?: Prisma.StringNullableFilter<"User"> | string | null
+  resetTokenExp?: Prisma.DateTimeNullableFilter<"User"> | Date | string | null
   createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
   organizationId?: Prisma.StringNullableFilter<"User"> | string | null
@@ -229,6 +245,7 @@ export type UserWhereInput = {
   complaintsCreated?: Prisma.ComplaintListRelationFilter
   complaintReplies?: Prisma.ComplaintReplyListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
+  exams?: Prisma.ExamListRelationFilter
 }
 
 export type UserOrderByWithRelationInput = {
@@ -239,6 +256,8 @@ export type UserOrderByWithRelationInput = {
   role?: Prisma.SortOrder
   subject?: Prisma.SortOrderInput | Prisma.SortOrder
   loginCode?: Prisma.SortOrderInput | Prisma.SortOrder
+  resetToken?: Prisma.SortOrderInput | Prisma.SortOrder
+  resetTokenExp?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -249,12 +268,14 @@ export type UserOrderByWithRelationInput = {
   complaintsCreated?: Prisma.ComplaintOrderByRelationAggregateInput
   complaintReplies?: Prisma.ComplaintReplyOrderByRelationAggregateInput
   notifications?: Prisma.NotificationOrderByRelationAggregateInput
+  exams?: Prisma.ExamOrderByRelationAggregateInput
 }
 
 export type UserWhereUniqueInput = Prisma.AtLeast<{
   id?: string
   email?: string
   loginCode?: string
+  resetToken?: string
   AND?: Prisma.UserWhereInput | Prisma.UserWhereInput[]
   OR?: Prisma.UserWhereInput[]
   NOT?: Prisma.UserWhereInput | Prisma.UserWhereInput[]
@@ -262,6 +283,7 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   name?: Prisma.StringFilter<"User"> | string
   role?: Prisma.EnumRoleFilter<"User"> | $Enums.Role
   subject?: Prisma.StringNullableFilter<"User"> | string | null
+  resetTokenExp?: Prisma.DateTimeNullableFilter<"User"> | Date | string | null
   createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
   organizationId?: Prisma.StringNullableFilter<"User"> | string | null
@@ -272,7 +294,8 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   complaintsCreated?: Prisma.ComplaintListRelationFilter
   complaintReplies?: Prisma.ComplaintReplyListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
-}, "id" | "email" | "loginCode">
+  exams?: Prisma.ExamListRelationFilter
+}, "id" | "email" | "loginCode" | "resetToken">
 
 export type UserOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
@@ -282,6 +305,8 @@ export type UserOrderByWithAggregationInput = {
   role?: Prisma.SortOrder
   subject?: Prisma.SortOrderInput | Prisma.SortOrder
   loginCode?: Prisma.SortOrderInput | Prisma.SortOrder
+  resetToken?: Prisma.SortOrderInput | Prisma.SortOrder
+  resetTokenExp?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -301,6 +326,8 @@ export type UserScalarWhereWithAggregatesInput = {
   role?: Prisma.EnumRoleWithAggregatesFilter<"User"> | $Enums.Role
   subject?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
   loginCode?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  resetToken?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
+  resetTokenExp?: Prisma.DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"User"> | Date | string
   organizationId?: Prisma.StringNullableWithAggregatesFilter<"User"> | string | null
@@ -314,6 +341,8 @@ export type UserCreateInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
@@ -323,6 +352,7 @@ export type UserCreateInput = {
   complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateInput = {
@@ -333,6 +363,8 @@ export type UserUncheckedCreateInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -342,6 +374,7 @@ export type UserUncheckedCreateInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUpdateInput = {
@@ -352,6 +385,8 @@ export type UserUpdateInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
@@ -361,6 +396,7 @@ export type UserUpdateInput = {
   complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateInput = {
@@ -371,6 +407,8 @@ export type UserUncheckedUpdateInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -380,6 +418,7 @@ export type UserUncheckedUpdateInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserCreateManyInput = {
@@ -390,6 +429,8 @@ export type UserCreateManyInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -403,6 +444,8 @@ export type UserUpdateManyMutationInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -415,6 +458,8 @@ export type UserUncheckedUpdateManyInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -443,6 +488,8 @@ export type UserCountOrderByAggregateInput = {
   role?: Prisma.SortOrder
   subject?: Prisma.SortOrder
   loginCode?: Prisma.SortOrder
+  resetToken?: Prisma.SortOrder
+  resetTokenExp?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
@@ -456,6 +503,8 @@ export type UserMaxOrderByAggregateInput = {
   role?: Prisma.SortOrder
   subject?: Prisma.SortOrder
   loginCode?: Prisma.SortOrder
+  resetToken?: Prisma.SortOrder
+  resetTokenExp?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
@@ -469,6 +518,8 @@ export type UserMinOrderByAggregateInput = {
   role?: Prisma.SortOrder
   subject?: Prisma.SortOrder
   loginCode?: Prisma.SortOrder
+  resetToken?: Prisma.SortOrder
+  resetTokenExp?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   organizationId?: Prisma.SortOrder
@@ -543,6 +594,10 @@ export type NullableStringFieldUpdateOperationsInput = {
   set?: string | null
 }
 
+export type NullableDateTimeFieldUpdateOperationsInput = {
+  set?: Date | string | null
+}
+
 export type UserCreateNestedOneWithoutClassAssignmentsInput = {
   create?: Prisma.XOR<Prisma.UserCreateWithoutClassAssignmentsInput, Prisma.UserUncheckedCreateWithoutClassAssignmentsInput>
   connectOrCreate?: Prisma.UserCreateOrConnectWithoutClassAssignmentsInput
@@ -601,6 +656,20 @@ export type UserUpdateOneRequiredWithoutComplaintRepliesNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutComplaintRepliesInput, Prisma.UserUpdateWithoutComplaintRepliesInput>, Prisma.UserUncheckedUpdateWithoutComplaintRepliesInput>
 }
 
+export type UserCreateNestedOneWithoutExamsInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutExamsInput, Prisma.UserUncheckedCreateWithoutExamsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutExamsInput
+  connect?: Prisma.UserWhereUniqueInput
+}
+
+export type UserUpdateOneRequiredWithoutExamsNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutExamsInput, Prisma.UserUncheckedCreateWithoutExamsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutExamsInput
+  upsert?: Prisma.UserUpsertWithoutExamsInput
+  connect?: Prisma.UserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutExamsInput, Prisma.UserUpdateWithoutExamsInput>, Prisma.UserUncheckedUpdateWithoutExamsInput>
+}
+
 export type UserCreateNestedOneWithoutNotificationsInput = {
   create?: Prisma.XOR<Prisma.UserCreateWithoutNotificationsInput, Prisma.UserUncheckedCreateWithoutNotificationsInput>
   connectOrCreate?: Prisma.UserCreateOrConnectWithoutNotificationsInput
@@ -623,6 +692,8 @@ export type UserCreateWithoutOwnedOrgInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
@@ -631,6 +702,7 @@ export type UserCreateWithoutOwnedOrgInput = {
   complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateWithoutOwnedOrgInput = {
@@ -641,6 +713,8 @@ export type UserUncheckedCreateWithoutOwnedOrgInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -649,6 +723,7 @@ export type UserUncheckedCreateWithoutOwnedOrgInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserCreateOrConnectWithoutOwnedOrgInput = {
@@ -664,6 +739,8 @@ export type UserCreateWithoutOrganizationInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   ownedOrg?: Prisma.OrganizationCreateNestedOneWithoutOwnerInput
@@ -672,6 +749,7 @@ export type UserCreateWithoutOrganizationInput = {
   complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateWithoutOrganizationInput = {
@@ -682,6 +760,8 @@ export type UserUncheckedCreateWithoutOrganizationInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   ownedOrg?: Prisma.OrganizationUncheckedCreateNestedOneWithoutOwnerInput
@@ -690,6 +770,7 @@ export type UserUncheckedCreateWithoutOrganizationInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserCreateOrConnectWithoutOrganizationInput = {
@@ -721,6 +802,8 @@ export type UserUpdateWithoutOwnedOrgInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
@@ -729,6 +812,7 @@ export type UserUpdateWithoutOwnedOrgInput = {
   complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateWithoutOwnedOrgInput = {
@@ -739,6 +823,8 @@ export type UserUncheckedUpdateWithoutOwnedOrgInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -747,6 +833,7 @@ export type UserUncheckedUpdateWithoutOwnedOrgInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUpsertWithWhereUniqueWithoutOrganizationInput = {
@@ -776,6 +863,8 @@ export type UserScalarWhereInput = {
   role?: Prisma.EnumRoleFilter<"User"> | $Enums.Role
   subject?: Prisma.StringNullableFilter<"User"> | string | null
   loginCode?: Prisma.StringNullableFilter<"User"> | string | null
+  resetToken?: Prisma.StringNullableFilter<"User"> | string | null
+  resetTokenExp?: Prisma.DateTimeNullableFilter<"User"> | Date | string | null
   createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
   organizationId?: Prisma.StringNullableFilter<"User"> | string | null
@@ -789,6 +878,8 @@ export type UserCreateWithoutClassAssignmentsInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
@@ -797,6 +888,7 @@ export type UserCreateWithoutClassAssignmentsInput = {
   complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateWithoutClassAssignmentsInput = {
@@ -807,6 +899,8 @@ export type UserUncheckedCreateWithoutClassAssignmentsInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -815,6 +909,7 @@ export type UserUncheckedCreateWithoutClassAssignmentsInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserCreateOrConnectWithoutClassAssignmentsInput = {
@@ -841,6 +936,8 @@ export type UserUpdateWithoutClassAssignmentsInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
@@ -849,6 +946,7 @@ export type UserUpdateWithoutClassAssignmentsInput = {
   complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateWithoutClassAssignmentsInput = {
@@ -859,6 +957,8 @@ export type UserUncheckedUpdateWithoutClassAssignmentsInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -867,6 +967,7 @@ export type UserUncheckedUpdateWithoutClassAssignmentsInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserCreateWithoutStudentsInput = {
@@ -877,6 +978,8 @@ export type UserCreateWithoutStudentsInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
@@ -885,6 +988,7 @@ export type UserCreateWithoutStudentsInput = {
   complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateWithoutStudentsInput = {
@@ -895,6 +999,8 @@ export type UserUncheckedCreateWithoutStudentsInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -903,6 +1009,7 @@ export type UserUncheckedCreateWithoutStudentsInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserCreateOrConnectWithoutStudentsInput = {
@@ -929,6 +1036,8 @@ export type UserUpdateWithoutStudentsInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
@@ -937,6 +1046,7 @@ export type UserUpdateWithoutStudentsInput = {
   complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateWithoutStudentsInput = {
@@ -947,6 +1057,8 @@ export type UserUncheckedUpdateWithoutStudentsInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -955,6 +1067,7 @@ export type UserUncheckedUpdateWithoutStudentsInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserCreateWithoutComplaintsCreatedInput = {
@@ -965,6 +1078,8 @@ export type UserCreateWithoutComplaintsCreatedInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
@@ -973,6 +1088,7 @@ export type UserCreateWithoutComplaintsCreatedInput = {
   students?: Prisma.StudentCreateNestedManyWithoutParentInput
   complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateWithoutComplaintsCreatedInput = {
@@ -983,6 +1099,8 @@ export type UserUncheckedCreateWithoutComplaintsCreatedInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -991,6 +1109,7 @@ export type UserUncheckedCreateWithoutComplaintsCreatedInput = {
   students?: Prisma.StudentUncheckedCreateNestedManyWithoutParentInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserCreateOrConnectWithoutComplaintsCreatedInput = {
@@ -1017,6 +1136,8 @@ export type UserUpdateWithoutComplaintsCreatedInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
@@ -1025,6 +1146,7 @@ export type UserUpdateWithoutComplaintsCreatedInput = {
   students?: Prisma.StudentUpdateManyWithoutParentNestedInput
   complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateWithoutComplaintsCreatedInput = {
@@ -1035,6 +1157,8 @@ export type UserUncheckedUpdateWithoutComplaintsCreatedInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1043,6 +1167,7 @@ export type UserUncheckedUpdateWithoutComplaintsCreatedInput = {
   students?: Prisma.StudentUncheckedUpdateManyWithoutParentNestedInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserCreateWithoutComplaintRepliesInput = {
@@ -1053,6 +1178,8 @@ export type UserCreateWithoutComplaintRepliesInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
@@ -1061,6 +1188,7 @@ export type UserCreateWithoutComplaintRepliesInput = {
   students?: Prisma.StudentCreateNestedManyWithoutParentInput
   complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateWithoutComplaintRepliesInput = {
@@ -1071,6 +1199,8 @@ export type UserUncheckedCreateWithoutComplaintRepliesInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -1079,6 +1209,7 @@ export type UserUncheckedCreateWithoutComplaintRepliesInput = {
   students?: Prisma.StudentUncheckedCreateNestedManyWithoutParentInput
   complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserCreateOrConnectWithoutComplaintRepliesInput = {
@@ -1105,6 +1236,8 @@ export type UserUpdateWithoutComplaintRepliesInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
@@ -1113,6 +1246,7 @@ export type UserUpdateWithoutComplaintRepliesInput = {
   students?: Prisma.StudentUpdateManyWithoutParentNestedInput
   complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateWithoutComplaintRepliesInput = {
@@ -1123,6 +1257,8 @@ export type UserUncheckedUpdateWithoutComplaintRepliesInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1130,6 +1266,107 @@ export type UserUncheckedUpdateWithoutComplaintRepliesInput = {
   classAssignments?: Prisma.ClassTeacherUncheckedUpdateManyWithoutTeacherNestedInput
   students?: Prisma.StudentUncheckedUpdateManyWithoutParentNestedInput
   complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
+}
+
+export type UserCreateWithoutExamsInput = {
+  id?: string
+  email: string
+  password: string
+  name: string
+  role: $Enums.Role
+  subject?: string | null
+  loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
+  ownedOrg?: Prisma.OrganizationCreateNestedOneWithoutOwnerInput
+  classAssignments?: Prisma.ClassTeacherCreateNestedManyWithoutTeacherInput
+  students?: Prisma.StudentCreateNestedManyWithoutParentInput
+  complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
+  complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutExamsInput = {
+  id?: string
+  email: string
+  password: string
+  name: string
+  role: $Enums.Role
+  subject?: string | null
+  loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  organizationId?: string | null
+  ownedOrg?: Prisma.OrganizationUncheckedCreateNestedOneWithoutOwnerInput
+  classAssignments?: Prisma.ClassTeacherUncheckedCreateNestedManyWithoutTeacherInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutParentInput
+  complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
+  complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutExamsInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutExamsInput, Prisma.UserUncheckedCreateWithoutExamsInput>
+}
+
+export type UserUpsertWithoutExamsInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutExamsInput, Prisma.UserUncheckedUpdateWithoutExamsInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutExamsInput, Prisma.UserUncheckedCreateWithoutExamsInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutExamsInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutExamsInput, Prisma.UserUncheckedUpdateWithoutExamsInput>
+}
+
+export type UserUpdateWithoutExamsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
+  ownedOrg?: Prisma.OrganizationUpdateOneWithoutOwnerNestedInput
+  classAssignments?: Prisma.ClassTeacherUpdateManyWithoutTeacherNestedInput
+  students?: Prisma.StudentUpdateManyWithoutParentNestedInput
+  complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
+  complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutExamsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  ownedOrg?: Prisma.OrganizationUncheckedUpdateOneWithoutOwnerNestedInput
+  classAssignments?: Prisma.ClassTeacherUncheckedUpdateManyWithoutTeacherNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutParentNestedInput
+  complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
+  complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
 }
 
@@ -1141,6 +1378,8 @@ export type UserCreateWithoutNotificationsInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organization?: Prisma.OrganizationCreateNestedOneWithoutUsersInput
@@ -1149,6 +1388,7 @@ export type UserCreateWithoutNotificationsInput = {
   students?: Prisma.StudentCreateNestedManyWithoutParentInput
   complaintsCreated?: Prisma.ComplaintCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserUncheckedCreateWithoutNotificationsInput = {
@@ -1159,6 +1399,8 @@ export type UserUncheckedCreateWithoutNotificationsInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
   organizationId?: string | null
@@ -1167,6 +1409,7 @@ export type UserUncheckedCreateWithoutNotificationsInput = {
   students?: Prisma.StudentUncheckedCreateNestedManyWithoutParentInput
   complaintsCreated?: Prisma.ComplaintUncheckedCreateNestedManyWithoutCreatedByInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedCreateNestedManyWithoutUserInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutCreatedByInput
 }
 
 export type UserCreateOrConnectWithoutNotificationsInput = {
@@ -1193,6 +1436,8 @@ export type UserUpdateWithoutNotificationsInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organization?: Prisma.OrganizationUpdateOneWithoutUsersNestedInput
@@ -1201,6 +1446,7 @@ export type UserUpdateWithoutNotificationsInput = {
   students?: Prisma.StudentUpdateManyWithoutParentNestedInput
   complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateWithoutNotificationsInput = {
@@ -1211,6 +1457,8 @@ export type UserUncheckedUpdateWithoutNotificationsInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   organizationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1219,6 +1467,7 @@ export type UserUncheckedUpdateWithoutNotificationsInput = {
   students?: Prisma.StudentUncheckedUpdateManyWithoutParentNestedInput
   complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserCreateManyOrganizationInput = {
@@ -1229,6 +1478,8 @@ export type UserCreateManyOrganizationInput = {
   role: $Enums.Role
   subject?: string | null
   loginCode?: string | null
+  resetToken?: string | null
+  resetTokenExp?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -1241,6 +1492,8 @@ export type UserUpdateWithoutOrganizationInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   ownedOrg?: Prisma.OrganizationUpdateOneWithoutOwnerNestedInput
@@ -1249,6 +1502,7 @@ export type UserUpdateWithoutOrganizationInput = {
   complaintsCreated?: Prisma.ComplaintUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateWithoutOrganizationInput = {
@@ -1259,6 +1513,8 @@ export type UserUncheckedUpdateWithoutOrganizationInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   ownedOrg?: Prisma.OrganizationUncheckedUpdateOneWithoutOwnerNestedInput
@@ -1267,6 +1523,7 @@ export type UserUncheckedUpdateWithoutOrganizationInput = {
   complaintsCreated?: Prisma.ComplaintUncheckedUpdateManyWithoutCreatedByNestedInput
   complaintReplies?: Prisma.ComplaintReplyUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUserNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutCreatedByNestedInput
 }
 
 export type UserUncheckedUpdateManyWithoutOrganizationInput = {
@@ -1277,6 +1534,8 @@ export type UserUncheckedUpdateManyWithoutOrganizationInput = {
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
   subject?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   loginCode?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetToken?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  resetTokenExp?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -1292,6 +1551,7 @@ export type UserCountOutputType = {
   complaintsCreated: number
   complaintReplies: number
   notifications: number
+  exams: number
 }
 
 export type UserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1300,6 +1560,7 @@ export type UserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.I
   complaintsCreated?: boolean | UserCountOutputTypeCountComplaintsCreatedArgs
   complaintReplies?: boolean | UserCountOutputTypeCountComplaintRepliesArgs
   notifications?: boolean | UserCountOutputTypeCountNotificationsArgs
+  exams?: boolean | UserCountOutputTypeCountExamsArgs
 }
 
 /**
@@ -1347,6 +1608,13 @@ export type UserCountOutputTypeCountNotificationsArgs<ExtArgs extends runtime.Ty
   where?: Prisma.NotificationWhereInput
 }
 
+/**
+ * UserCountOutputType without action
+ */
+export type UserCountOutputTypeCountExamsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ExamWhereInput
+}
+
 
 export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1356,6 +1624,8 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   role?: boolean
   subject?: boolean
   loginCode?: boolean
+  resetToken?: boolean
+  resetTokenExp?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
@@ -1366,6 +1636,7 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   complaintsCreated?: boolean | Prisma.User$complaintsCreatedArgs<ExtArgs>
   complaintReplies?: boolean | Prisma.User$complaintRepliesArgs<ExtArgs>
   notifications?: boolean | Prisma.User$notificationsArgs<ExtArgs>
+  exams?: boolean | Prisma.User$examsArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
 
@@ -1377,6 +1648,8 @@ export type UserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   role?: boolean
   subject?: boolean
   loginCode?: boolean
+  resetToken?: boolean
+  resetTokenExp?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
@@ -1391,6 +1664,8 @@ export type UserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   role?: boolean
   subject?: boolean
   loginCode?: boolean
+  resetToken?: boolean
+  resetTokenExp?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
@@ -1405,12 +1680,14 @@ export type UserSelectScalar = {
   role?: boolean
   subject?: boolean
   loginCode?: boolean
+  resetToken?: boolean
+  resetTokenExp?: boolean
   createdAt?: boolean
   updatedAt?: boolean
   organizationId?: boolean
 }
 
-export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "email" | "password" | "name" | "role" | "subject" | "loginCode" | "createdAt" | "updatedAt" | "organizationId", ExtArgs["result"]["user"]>
+export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "email" | "password" | "name" | "role" | "subject" | "loginCode" | "resetToken" | "resetTokenExp" | "createdAt" | "updatedAt" | "organizationId", ExtArgs["result"]["user"]>
 export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   organization?: boolean | Prisma.User$organizationArgs<ExtArgs>
   ownedOrg?: boolean | Prisma.User$ownedOrgArgs<ExtArgs>
@@ -1419,6 +1696,7 @@ export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   complaintsCreated?: boolean | Prisma.User$complaintsCreatedArgs<ExtArgs>
   complaintReplies?: boolean | Prisma.User$complaintRepliesArgs<ExtArgs>
   notifications?: boolean | Prisma.User$notificationsArgs<ExtArgs>
+  exams?: boolean | Prisma.User$examsArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type UserIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1438,6 +1716,7 @@ export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     complaintsCreated: Prisma.$ComplaintPayload<ExtArgs>[]
     complaintReplies: Prisma.$ComplaintReplyPayload<ExtArgs>[]
     notifications: Prisma.$NotificationPayload<ExtArgs>[]
+    exams: Prisma.$ExamPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1447,6 +1726,8 @@ export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     role: $Enums.Role
     subject: string | null
     loginCode: string | null
+    resetToken: string | null
+    resetTokenExp: Date | null
     createdAt: Date
     updatedAt: Date
     organizationId: string | null
@@ -1851,6 +2132,7 @@ export interface Prisma__UserClient<T, Null = never, ExtArgs extends runtime.Typ
   complaintsCreated<T extends Prisma.User$complaintsCreatedArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$complaintsCreatedArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ComplaintPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   complaintReplies<T extends Prisma.User$complaintRepliesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$complaintRepliesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ComplaintReplyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   notifications<T extends Prisma.User$notificationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$notificationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NotificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  exams<T extends Prisma.User$examsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$examsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ExamPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1887,6 +2169,8 @@ export interface UserFieldRefs {
   readonly role: Prisma.FieldRef<"User", 'Role'>
   readonly subject: Prisma.FieldRef<"User", 'String'>
   readonly loginCode: Prisma.FieldRef<"User", 'String'>
+  readonly resetToken: Prisma.FieldRef<"User", 'String'>
+  readonly resetTokenExp: Prisma.FieldRef<"User", 'DateTime'>
   readonly createdAt: Prisma.FieldRef<"User", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"User", 'DateTime'>
   readonly organizationId: Prisma.FieldRef<"User", 'String'>
@@ -2446,6 +2730,30 @@ export type User$notificationsArgs<ExtArgs extends runtime.Types.Extensions.Inte
   take?: number
   skip?: number
   distinct?: Prisma.NotificationScalarFieldEnum | Prisma.NotificationScalarFieldEnum[]
+}
+
+/**
+ * User.exams
+ */
+export type User$examsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Exam
+   */
+  select?: Prisma.ExamSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Exam
+   */
+  omit?: Prisma.ExamOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ExamInclude<ExtArgs> | null
+  where?: Prisma.ExamWhereInput
+  orderBy?: Prisma.ExamOrderByWithRelationInput | Prisma.ExamOrderByWithRelationInput[]
+  cursor?: Prisma.ExamWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ExamScalarFieldEnum | Prisma.ExamScalarFieldEnum[]
 }
 
 /**

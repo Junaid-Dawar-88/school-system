@@ -55,6 +55,9 @@ export default function LoginPage() {
                   {isPending ? "Signing in..." : "Sign In"}
                 </Button>
               </form>
+              <div className="text-right mt-2">
+                <Link href="/forgot-password" className="text-xs text-gray-400 hover:text-blue-600 transition-colors">Forgot password?</Link>
+              </div>
             </TabsContent>
 
             <TabsContent value="code">

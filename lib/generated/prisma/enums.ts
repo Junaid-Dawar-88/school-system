@@ -35,6 +35,14 @@ export const ComplaintType = {
 export type ComplaintType = (typeof ComplaintType)[keyof typeof ComplaintType]
 
 
+export const ComplaintStatus = {
+  OPEN: 'OPEN',
+  RESOLVED: 'RESOLVED'
+} as const
+
+export type ComplaintStatus = (typeof ComplaintStatus)[keyof typeof ComplaintStatus]
+
+
 export const ComplaintVisibility = {
   PUBLIC: 'PUBLIC',
   PRIVATE: 'PRIVATE'
@@ -45,6 +53,8 @@ export type ComplaintVisibility = (typeof ComplaintVisibility)[keyof typeof Comp
 
 export const NotificationType = {
   COMPLAINT: 'COMPLAINT',
+  EXAM: 'EXAM',
+  ATTENDANCE: 'ATTENDANCE',
   GENERAL: 'GENERAL'
 } as const
 

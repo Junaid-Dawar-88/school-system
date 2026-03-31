@@ -7,6 +7,7 @@ import { attendanceRouter } from "./attendance";
 import { complaintRouter } from "./complaint";
 import { notificationRouter } from "./notification";
 import { settingsRouter } from "./settings";
+import { examRouter } from "./exam";
 
 export const appRouter = router({
   org: organizationRouter,
@@ -17,6 +18,7 @@ export const appRouter = router({
   complaint: complaintRouter,
   notification: notificationRouter,
   settings: settingsRouter,
+  exam: examRouter,
 });
 
 export type AppRouter = typeof appRouter;

@@ -52,6 +52,10 @@ export default function ComplaintsPage() {
     onSuccess: () => { utils.complaint.list.invalidate(); toast.success("Complaint deleted"); },
     onError: (e) => toast.error(e.message),
   });
+  const toggleStatusMut = trpc.complaint.toggleStatus.useMutation({
+    onSuccess: () => { utils.complaint.list.invalidate(); toast.success("Status updated"); },
+    onError: (e) => toast.error(e.message),
+  });
   const replyMut = trpc.complaint.reply.useMutation({
     onSuccess: () => { utils.complaint.list.invalidate(); setReplyTo(null); setReplyMsg(""); toast.success("Reply sent"); },
     onError: (e) => toast.error(e.message),
@@ -84,13 +88,19 @@ export default function ComplaintsPage() {
                   {c.visibility === "PRIVATE" ? "Parent & Admin Only" : "Public"}
                 </Badge>
               )}
+              <Badge className={c.status === "RESOLVED" ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700"}>
+                {c.status}
+              </Badge>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-gray-700 mb-3">{c.message}</p>
-            {/* Edit/Delete — creator or admin */}
+            {/* Actions — creator or admin */}
             {(c.createdById === profile?.id || profile?.role === "ADMIN") && (
               <div className="flex gap-2 mb-4">
+                <Button size="sm" variant={c.status === "OPEN" ? "default" : "outline"} onClick={() => toggleStatusMut.mutate({ id: c.id })}>
+                  {c.status === "OPEN" ? "Mark Resolved" : "Reopen"}
+                </Button>
                 {c.createdById === profile?.id && (
                   <Button size="sm" variant="outline" onClick={() => setEditingComplaint({ id: c.id, message: c.message })}>Edit</Button>
                 )}
