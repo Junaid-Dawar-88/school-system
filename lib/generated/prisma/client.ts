@@ -82,11 +82,6 @@ export type Complaint = Prisma.ComplaintModel
  */
 export type ComplaintReply = Prisma.ComplaintReplyModel
 /**
- * Model Exam
- * 
- */
-export type Exam = Prisma.ExamModel
-/**
  * Model Notification
  * 
  */

@@ -28,7 +28,6 @@ export type ComplaintMinAggregateOutputType = {
   id: string | null
   message: string | null
   type: $Enums.ComplaintType | null
-  status: $Enums.ComplaintStatus | null
   visibility: $Enums.ComplaintVisibility | null
   createdById: string | null
   studentId: string | null
@@ -42,7 +41,6 @@ export type ComplaintMaxAggregateOutputType = {
   id: string | null
   message: string | null
   type: $Enums.ComplaintType | null
-  status: $Enums.ComplaintStatus | null
   visibility: $Enums.ComplaintVisibility | null
   createdById: string | null
   studentId: string | null
@@ -56,7 +54,6 @@ export type ComplaintCountAggregateOutputType = {
   id: number
   message: number
   type: number
-  status: number
   visibility: number
   createdById: number
   studentId: number
@@ -72,7 +69,6 @@ export type ComplaintMinAggregateInputType = {
   id?: true
   message?: true
   type?: true
-  status?: true
   visibility?: true
   createdById?: true
   studentId?: true
@@ -86,7 +82,6 @@ export type ComplaintMaxAggregateInputType = {
   id?: true
   message?: true
   type?: true
-  status?: true
   visibility?: true
   createdById?: true
   studentId?: true
@@ -100,7 +95,6 @@ export type ComplaintCountAggregateInputType = {
   id?: true
   message?: true
   type?: true
-  status?: true
   visibility?: true
   createdById?: true
   studentId?: true
@@ -187,7 +181,6 @@ export type ComplaintGroupByOutputType = {
   id: string
   message: string
   type: $Enums.ComplaintType
-  status: $Enums.ComplaintStatus
   visibility: $Enums.ComplaintVisibility
   createdById: string
   studentId: string | null
@@ -222,7 +215,6 @@ export type ComplaintWhereInput = {
   id?: Prisma.StringFilter<"Complaint"> | string
   message?: Prisma.StringFilter<"Complaint"> | string
   type?: Prisma.EnumComplaintTypeFilter<"Complaint"> | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFilter<"Complaint"> | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFilter<"Complaint"> | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFilter<"Complaint"> | string
   studentId?: Prisma.StringNullableFilter<"Complaint"> | string | null
@@ -240,7 +232,6 @@ export type ComplaintOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   message?: Prisma.SortOrder
   type?: Prisma.SortOrder
-  status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
   studentId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -261,7 +252,6 @@ export type ComplaintWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.ComplaintWhereInput | Prisma.ComplaintWhereInput[]
   message?: Prisma.StringFilter<"Complaint"> | string
   type?: Prisma.EnumComplaintTypeFilter<"Complaint"> | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFilter<"Complaint"> | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFilter<"Complaint"> | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFilter<"Complaint"> | string
   studentId?: Prisma.StringNullableFilter<"Complaint"> | string | null
@@ -279,7 +269,6 @@ export type ComplaintOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   message?: Prisma.SortOrder
   type?: Prisma.SortOrder
-  status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
   studentId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -299,7 +288,6 @@ export type ComplaintScalarWhereWithAggregatesInput = {
   id?: Prisma.StringWithAggregatesFilter<"Complaint"> | string
   message?: Prisma.StringWithAggregatesFilter<"Complaint"> | string
   type?: Prisma.EnumComplaintTypeWithAggregatesFilter<"Complaint"> | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusWithAggregatesFilter<"Complaint"> | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityWithAggregatesFilter<"Complaint"> | $Enums.ComplaintVisibility
   createdById?: Prisma.StringWithAggregatesFilter<"Complaint"> | string
   studentId?: Prisma.StringNullableWithAggregatesFilter<"Complaint"> | string | null
@@ -313,7 +301,6 @@ export type ComplaintCreateInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   teacherId?: string | null
   createdAt?: Date | string
@@ -328,7 +315,6 @@ export type ComplaintUncheckedCreateInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   createdById: string
   studentId?: string | null
@@ -343,7 +329,6 @@ export type ComplaintUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -358,7 +343,6 @@ export type ComplaintUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
   studentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -373,7 +357,6 @@ export type ComplaintCreateManyInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   createdById: string
   studentId?: string | null
@@ -387,7 +370,6 @@ export type ComplaintUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -398,7 +380,6 @@ export type ComplaintUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
   studentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -422,7 +403,6 @@ export type ComplaintCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   message?: Prisma.SortOrder
   type?: Prisma.SortOrder
-  status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
   studentId?: Prisma.SortOrder
@@ -436,7 +416,6 @@ export type ComplaintMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   message?: Prisma.SortOrder
   type?: Prisma.SortOrder
-  status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
   studentId?: Prisma.SortOrder
@@ -450,7 +429,6 @@ export type ComplaintMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   message?: Prisma.SortOrder
   type?: Prisma.SortOrder
-  status?: Prisma.SortOrder
   visibility?: Prisma.SortOrder
   createdById?: Prisma.SortOrder
   studentId?: Prisma.SortOrder
@@ -595,10 +573,6 @@ export type EnumComplaintTypeFieldUpdateOperationsInput = {
   set?: $Enums.ComplaintType
 }
 
-export type EnumComplaintStatusFieldUpdateOperationsInput = {
-  set?: $Enums.ComplaintStatus
-}
-
 export type EnumComplaintVisibilityFieldUpdateOperationsInput = {
   set?: $Enums.ComplaintVisibility
 }
@@ -621,7 +595,6 @@ export type ComplaintCreateWithoutOrganizationInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   teacherId?: string | null
   createdAt?: Date | string
@@ -635,7 +608,6 @@ export type ComplaintUncheckedCreateWithoutOrganizationInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   createdById: string
   studentId?: string | null
@@ -678,7 +650,6 @@ export type ComplaintScalarWhereInput = {
   id?: Prisma.StringFilter<"Complaint"> | string
   message?: Prisma.StringFilter<"Complaint"> | string
   type?: Prisma.EnumComplaintTypeFilter<"Complaint"> | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFilter<"Complaint"> | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFilter<"Complaint"> | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFilter<"Complaint"> | string
   studentId?: Prisma.StringNullableFilter<"Complaint"> | string | null
@@ -692,7 +663,6 @@ export type ComplaintCreateWithoutCreatedByInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   teacherId?: string | null
   createdAt?: Date | string
@@ -706,7 +676,6 @@ export type ComplaintUncheckedCreateWithoutCreatedByInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   studentId?: string | null
   teacherId?: string | null
@@ -746,7 +715,6 @@ export type ComplaintCreateWithoutStudentInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   teacherId?: string | null
   createdAt?: Date | string
@@ -760,7 +728,6 @@ export type ComplaintUncheckedCreateWithoutStudentInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   createdById: string
   teacherId?: string | null
@@ -800,7 +767,6 @@ export type ComplaintCreateWithoutRepliesInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   teacherId?: string | null
   createdAt?: Date | string
@@ -814,7 +780,6 @@ export type ComplaintUncheckedCreateWithoutRepliesInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   createdById: string
   studentId?: string | null
@@ -844,7 +809,6 @@ export type ComplaintUpdateWithoutRepliesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -858,7 +822,6 @@ export type ComplaintUncheckedUpdateWithoutRepliesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
   studentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -872,7 +835,6 @@ export type ComplaintCreateManyOrganizationInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   createdById: string
   studentId?: string | null
@@ -885,7 +847,6 @@ export type ComplaintUpdateWithoutOrganizationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -899,7 +860,6 @@ export type ComplaintUncheckedUpdateWithoutOrganizationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
   studentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -913,7 +873,6 @@ export type ComplaintUncheckedUpdateManyWithoutOrganizationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
   studentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -926,7 +885,6 @@ export type ComplaintCreateManyCreatedByInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   studentId?: string | null
   teacherId?: string | null
@@ -939,7 +897,6 @@ export type ComplaintUpdateWithoutCreatedByInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -953,7 +910,6 @@ export type ComplaintUncheckedUpdateWithoutCreatedByInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   studentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -967,7 +923,6 @@ export type ComplaintUncheckedUpdateManyWithoutCreatedByInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   studentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -980,7 +935,6 @@ export type ComplaintCreateManyStudentInput = {
   id?: string
   message: string
   type: $Enums.ComplaintType
-  status?: $Enums.ComplaintStatus
   visibility?: $Enums.ComplaintVisibility
   createdById: string
   teacherId?: string | null
@@ -993,7 +947,6 @@ export type ComplaintUpdateWithoutStudentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1007,7 +960,6 @@ export type ComplaintUncheckedUpdateWithoutStudentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1021,7 +973,6 @@ export type ComplaintUncheckedUpdateManyWithoutStudentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   message?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumComplaintTypeFieldUpdateOperationsInput | $Enums.ComplaintType
-  status?: Prisma.EnumComplaintStatusFieldUpdateOperationsInput | $Enums.ComplaintStatus
   visibility?: Prisma.EnumComplaintVisibilityFieldUpdateOperationsInput | $Enums.ComplaintVisibility
   createdById?: Prisma.StringFieldUpdateOperationsInput | string
   teacherId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1065,7 +1016,6 @@ export type ComplaintSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   id?: boolean
   message?: boolean
   type?: boolean
-  status?: boolean
   visibility?: boolean
   createdById?: boolean
   studentId?: boolean
@@ -1084,7 +1034,6 @@ export type ComplaintSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   id?: boolean
   message?: boolean
   type?: boolean
-  status?: boolean
   visibility?: boolean
   createdById?: boolean
   studentId?: boolean
@@ -1101,7 +1050,6 @@ export type ComplaintSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   id?: boolean
   message?: boolean
   type?: boolean
-  status?: boolean
   visibility?: boolean
   createdById?: boolean
   studentId?: boolean
@@ -1118,7 +1066,6 @@ export type ComplaintSelectScalar = {
   id?: boolean
   message?: boolean
   type?: boolean
-  status?: boolean
   visibility?: boolean
   createdById?: boolean
   studentId?: boolean
@@ -1128,7 +1075,7 @@ export type ComplaintSelectScalar = {
   updatedAt?: boolean
 }
 
-export type ComplaintOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "message" | "type" | "status" | "visibility" | "createdById" | "studentId" | "teacherId" | "organizationId" | "createdAt" | "updatedAt", ExtArgs["result"]["complaint"]>
+export type ComplaintOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "message" | "type" | "visibility" | "createdById" | "studentId" | "teacherId" | "organizationId" | "createdAt" | "updatedAt", ExtArgs["result"]["complaint"]>
 export type ComplaintInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   createdBy?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   student?: boolean | Prisma.Complaint$studentArgs<ExtArgs>
@@ -1159,7 +1106,6 @@ export type $ComplaintPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     id: string
     message: string
     type: $Enums.ComplaintType
-    status: $Enums.ComplaintStatus
     visibility: $Enums.ComplaintVisibility
     createdById: string
     studentId: string | null
@@ -1597,7 +1543,6 @@ export interface ComplaintFieldRefs {
   readonly id: Prisma.FieldRef<"Complaint", 'String'>
   readonly message: Prisma.FieldRef<"Complaint", 'String'>
   readonly type: Prisma.FieldRef<"Complaint", 'ComplaintType'>
-  readonly status: Prisma.FieldRef<"Complaint", 'ComplaintStatus'>
   readonly visibility: Prisma.FieldRef<"Complaint", 'ComplaintVisibility'>
   readonly createdById: Prisma.FieldRef<"Complaint", 'String'>
   readonly studentId: Prisma.FieldRef<"Complaint", 'String'>

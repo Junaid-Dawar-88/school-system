@@ -184,20 +184,6 @@ export const complaintRouter = router({
       return prisma.complaint.delete({ where: { id: input.id } });
     }),
 
-  // Admin or creator can resolve/reopen
-  toggleStatus: protectedProcedure
-    .input(z.object({ id: z.string() }))
-    .mutation(async ({ input, ctx }) => {
-      const complaint = await prisma.complaint.findFirst({
-        where: { id: input.id, organizationId: ctx.user.organizationId },
-      });
-      if (!complaint) throw new TRPCError({ code: "NOT_FOUND" });
-      if (complaint.createdById !== ctx.user.id && ctx.user.role !== "ADMIN")
-        throw new TRPCError({ code: "FORBIDDEN" });
-
-      const newStatus = complaint.status === "OPEN" ? "RESOLVED" : "OPEN";
-      return prisma.complaint.update({ where: { id: input.id }, data: { status: newStatus } });
-    }),
 });
 
 function fetchComplaints(where: Record<string, unknown>) {
