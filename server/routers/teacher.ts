@@ -98,7 +98,7 @@ export const teacherRouter = router({
             </div>
           </div>
         `,
-      }).catch(console.error);
+      }).catch((err) => console.error("[Teacher Email] Failed:", err));
 
       return teacher;
     }),
