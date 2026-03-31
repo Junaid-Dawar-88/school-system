@@ -127,7 +127,7 @@ export default function ClassesPage() {
           <div className="space-y-3 border rounded-xl p-3">
             {grouped.map((g) => (
               <div key={g.teacherId} className="space-y-1">
-                <p className="text-sm font-semibold text-gray-700">{g.name}</p>
+                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">{g.name}</p>
                 <div className="flex flex-wrap gap-2">
                   {g.subjects.map((s) => (
                     <span key={s.idx} className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-lg">
@@ -150,7 +150,7 @@ export default function ClassesPage() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-2xl font-bold">Classes</h1>
-          <p className="text-gray-500">{selectedClassId ? "Managing class" : "Click a class to manage"}</p>
+          <p className="text-gray-500 dark:text-gray-400">{selectedClassId ? "Managing class" : "Click a class to manage"}</p>
         </div>
         {isAdmin && !selectedClassId && <Button onClick={() => { setAssignments([]); setPickTeacher(""); setPickSubject(""); setOpenCreate(true); }}>+ Create Class</Button>}
         {selectedClassId && <Button variant="outline" onClick={() => setSelectedClassId(null)}>&larr; Back to Classes</Button>}
@@ -167,7 +167,7 @@ export default function ClassesPage() {
               const teacherNames = c.teachers.map((t) => t.teacher.name.toLowerCase()).join(" ");
               return !q || c.name.toLowerCase().includes(q) || teacherNames.includes(q);
             });
-            return !filtered?.length ? <div className="bg-white rounded-xl border p-12 text-center text-gray-400">{classes?.length ? "No matching classes" : "No classes yet."}</div>
+            return !filtered?.length ? <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800 p-12 text-center text-gray-400">{classes?.length ? "No matching classes" : "No classes yet."}</div>
             : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((c) => (
@@ -190,9 +190,9 @@ export default function ClassesPage() {
                         return tMap.size === 0 ? <span className="text-xs text-gray-400">No teachers assigned</span>
                         : Array.from(tMap.entries()).map(([id, { name, subjects }]) => (
                           <div key={id} className="text-xs">
-                            <span className="font-medium text-gray-700">{name}</span>
+                            <span className="font-medium text-gray-700 dark:text-gray-300">{name}</span>
                             <span className="text-gray-400 mx-1">—</span>
-                            <span className="text-gray-500">{subjects.join(", ")}</span>
+                            <span className="text-gray-500 dark:text-gray-400">{subjects.join(", ")}</span>
                           </div>
                         ));
                       })()}
@@ -228,12 +228,12 @@ export default function ClassesPage() {
 
           {/* Students Tab */}
           <TabsContent value="students">
-            <div className="bg-white rounded-xl border">
+            <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800">
               <div className="p-4 border-b flex items-center justify-between">
                 <h2 className="text-lg font-bold">{classes?.find((c) => c.id === selectedClassId)?.name} — Students</h2>
                 <Button size="sm" onClick={() => { setStudentParentId(""); setEditingStudent(null); setOpenAddStudent(true); }}>+ Add Student</Button>
               </div>
-              <div className="p-4 border-b">
+              <div className="p-4 border-b dark:border-gray-800">
                 <Input placeholder="Search by name, roll number, or father name..." value={searchStudent} onChange={(e) => setSearchStudent(e.target.value)} className="max-w-sm" />
               </div>
               <Table>
@@ -267,7 +267,7 @@ export default function ClassesPage() {
 
           {/* Teachers & Subjects Tab */}
           <TabsContent value="teachers">
-            <div className="bg-white rounded-xl border p-6">
+            <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800 p-6">
               <h2 className="text-lg font-bold mb-4">{classes?.find((c) => c.id === selectedClassId)?.name} — Teachers & Subjects</h2>
               {classDetail?.teachers?.length === 0 ? (
                 <p className="text-gray-400">No teachers assigned to this class.</p>
@@ -280,12 +280,12 @@ export default function ClassesPage() {
                       tMap.get(t.teacher.id)!.subjects.push(t.subject);
                     });
                     return Array.from(tMap.entries()).map(([id, { name, subjects }]) => (
-                      <div key={id} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                      <div key={id} className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
                         <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm shrink-0">
                           {name.charAt(0).toUpperCase()}
                         </div>
                         <div>
-                          <p className="font-semibold text-gray-900">{name}</p>
+                          <p className="font-semibold text-gray-900 dark:text-gray-100">{name}</p>
                           <div className="flex flex-wrap gap-1.5 mt-1">
                             {subjects.map((s) => (
                               <Badge key={s} variant="secondary" className="text-xs">{s}</Badge>
@@ -302,8 +302,8 @@ export default function ClassesPage() {
 
           {/* Attendance History Tab */}
           <TabsContent value="attendance">
-            <div className="bg-white rounded-xl border">
-              <div className="p-4 border-b"><h2 className="text-lg font-bold">Attendance History</h2></div>
+            <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800">
+              <div className="p-4 border-b dark:border-gray-800"><h2 className="text-lg font-bold">Attendance History</h2></div>
               {historyByDate.size === 0 ? (
                 <div className="p-8 text-center text-gray-400">No attendance records yet.</div>
               ) : (

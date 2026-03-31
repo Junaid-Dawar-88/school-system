@@ -20,10 +20,10 @@ export default async function DashboardPage() {
     return (
       <div className="p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto">
         <div className="mb-6">
-          <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Welcome, {user.name}!</h1>
-          <p className="mt-1 text-sm text-gray-500">{org?.name}</p>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">Welcome, {user.name}!</h1>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{org?.name}</p>
         </div>
-        <div className="bg-white rounded-2xl border shadow-sm p-5 sm:p-6">
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 shadow-sm p-5 sm:p-6">
           <h2 className="text-lg font-bold mb-4">Your Children</h2>
           {children.length === 0 ? (
             <p className="text-gray-400 text-sm">No children linked yet. Ask your school to add your child.</p>
@@ -31,13 +31,13 @@ export default async function DashboardPage() {
             <div className="grid gap-3">
               {children.map((child) => (
                 <Link key={child.id} href={`/dashboard/parent-view/${child.id}`}
-                  className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border hover:border-blue-300 hover:bg-blue-50/50 transition-all group">
+                  className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl border hover:border-blue-300 hover:bg-blue-50/50 transition-all group">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm shrink-0 group-hover:bg-blue-200 transition-colors">
                     {child.name.charAt(0)}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-gray-900 truncate">{child.name}</p>
-                    <p className="text-sm text-gray-500">{child.class.name}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{child.class.name}</p>
                   </div>
                   <svg className="w-5 h-5 text-gray-300 group-hover:text-blue-500 transition-colors shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -48,8 +48,8 @@ export default async function DashboardPage() {
           )}
         </div>
         <div className="mt-4 flex flex-wrap gap-3">
-          <Link href="/dashboard/complaints" className="px-4 py-2.5 bg-white rounded-xl border text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm">Complaints</Link>
-          <Link href="/dashboard/notifications" className="px-4 py-2.5 bg-white rounded-xl border text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm">Notifications</Link>
+          <Link href="/dashboard/complaints" className="px-4 py-2.5 bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm">Complaints</Link>
+          <Link href="/dashboard/notifications" className="px-4 py-2.5 bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm">Notifications</Link>
         </div>
       </div>
     );
@@ -73,8 +73,8 @@ export default async function DashboardPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="mb-6 sm:mb-8">
-        <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Welcome back, {user.name}!</h1>
-        <p className="mt-1 text-sm text-gray-500">{org?.name} &middot; {user.role}</p>
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">Welcome back, {user.name}!</h1>
+        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{org?.name} &middot; {user.role}</p>
       </div>
 
       {user.role === "ADMIN" && org?.inviteCode && (
@@ -87,11 +87,11 @@ export default async function DashboardPage() {
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
         {stats.map((s) => (
-          <div key={s.label} className="bg-white rounded-2xl border p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow">
+          <div key={s.label} className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-xs sm:text-sm font-medium text-gray-500">{s.label}</p>
-                <p className="mt-1 text-2xl sm:text-3xl font-bold text-gray-900">{s.value}</p>
+                <p className="text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400">{s.label}</p>
+                <p className="mt-1 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">{s.value}</p>
               </div>
               <div className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-linear-to-br ${s.color} flex items-center justify-center shadow-md`}>
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -103,7 +103,7 @@ export default async function DashboardPage() {
         ))}
       </div>
 
-      <div className="bg-white rounded-2xl border p-4 sm:p-6 shadow-sm">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 p-4 sm:p-6 shadow-sm">
         <h2 className="text-lg font-bold text-gray-900 mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {[
@@ -114,7 +114,7 @@ export default async function DashboardPage() {
             { label: "Notifications", href: "/dashboard/notifications" },
             { label: "Settings", href: "/dashboard/settings" },
           ].map((a) => (
-            <Link key={a.label} href={a.href} className="flex items-center justify-center gap-2 px-3 py-3 bg-gray-50 rounded-xl text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all border hover:border-blue-200 hover:shadow-sm">
+            <Link key={a.label} href={a.href} className="flex items-center justify-center gap-2 px-3 py-3 bg-gray-50 dark:bg-gray-800 rounded-xl text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all border hover:border-blue-200 hover:shadow-sm">
               {a.label}
             </Link>
           ))}

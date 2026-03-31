@@ -34,10 +34,10 @@ export default function ExamsPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="flex items-center justify-between mb-6">
-        <div><h1 className="text-2xl font-bold">Exams</h1><p className="text-gray-500">Schedule and manage exams</p></div>
+        <div><h1 className="text-2xl font-bold">Exams</h1><p className="text-gray-500 dark:text-gray-400">Schedule and manage exams</p></div>
         {isTeacherOrAdmin && <Button onClick={() => { setClassId(""); setOpen(true); }}>+ Schedule Exam</Button>}
       </div>
-      <div className="bg-white rounded-2xl border shadow-sm overflow-x-auto">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 shadow-sm overflow-x-auto">
         <Table>
           <TableHeader><TableRow><TableHead>Title</TableHead><TableHead>Class</TableHead><TableHead>Date</TableHead><TableHead>Created By</TableHead><TableHead>Description</TableHead>{isTeacherOrAdmin && <TableHead className="text-right">Actions</TableHead>}</TableRow></TableHeader>
           <TableBody>

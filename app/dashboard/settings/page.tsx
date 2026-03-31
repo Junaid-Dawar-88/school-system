@@ -34,7 +34,7 @@ export default function SettingsPage() {
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 max-w-2xl mx-auto">
-      <div className="mb-6"><h1 className="text-2xl font-bold">Settings</h1><p className="text-gray-500">Manage your account</p></div>
+      <div className="mb-6"><h1 className="text-2xl font-bold">Settings</h1><p className="text-gray-500 dark:text-gray-400">Manage your account</p></div>
       <div className="space-y-6">
         <Card>
           <CardHeader><div className="flex items-center justify-between"><CardTitle>Profile</CardTitle><Badge variant="secondary">{profile?.role}</Badge></div></CardHeader>

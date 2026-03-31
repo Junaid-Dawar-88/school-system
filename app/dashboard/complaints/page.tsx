@@ -66,7 +66,7 @@ export default function ComplaintsPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="flex items-center justify-between mb-6">
-        <div><h1 className="text-2xl font-bold">Complaints</h1><p className="text-gray-500">File and respond to complaints</p></div>
+        <div><h1 className="text-2xl font-bold">Complaints</h1><p className="text-gray-500 dark:text-gray-400">File and respond to complaints</p></div>
         <div className="flex gap-2">
           {students && students.length > 0 && <Button onClick={() => { setSelectedClassId(""); setSelectedStudentId(""); setStudentMsg(""); setVisibility("PUBLIC"); setOpenStudent(true); }}>Complaint About Student</Button>}
           {teachers && <Button variant="outline" onClick={() => { setSelectedTeacherId(""); setTeacherMsg(""); setOpenTeacher(true); }}>Complaint About Teacher</Button>}
@@ -74,7 +74,7 @@ export default function ComplaintsPage() {
       </div>
 
       {isLoading ? <p className="text-gray-400">Loading...</p>
-      : !complaints?.length ? <div className="bg-white rounded-2xl border shadow-sm p-12 text-center text-gray-400">No complaints yet</div>
+      : !complaints?.length ? <div className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 shadow-sm p-12 text-center text-gray-400">No complaints yet</div>
       : <div className="space-y-4">{complaints.map((c) => (
         <Card key={c.id}>
           <CardHeader className="pb-3">
@@ -107,15 +107,15 @@ export default function ComplaintsPage() {
                 <Button size="sm" variant="destructive" onClick={() => { if (confirm("Delete this complaint?")) deleteComplaintMut.mutate({ id: c.id }); }}>Delete</Button>
               </div>
             )}
-            {c.replies.length > 0 && (<><Separator className="mb-4" /><div className="space-y-3"><p className="text-sm font-semibold text-gray-500">Replies</p>
+            {c.replies.length > 0 && (<><Separator className="mb-4" /><div className="space-y-3"><p className="text-sm font-semibold text-gray-500 dark:text-gray-400">Replies</p>
               {c.replies.map((r) => (
-                <div key={r.id} className="bg-gray-50 rounded-lg p-3">
+                <div key={r.id} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-sm font-medium">{r.user.name}</span>
                     <Badge className={roleBadge[r.user.role]} variant="secondary">{r.user.role}</Badge>
                     <span className="text-xs text-gray-400">{new Date(r.createdAt).toLocaleString()}</span>
                   </div>
-                  <p className="text-sm text-gray-700">{r.message}</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">{r.message}</p>
                 </div>
               ))}
             </div></>)}
@@ -158,15 +158,15 @@ export default function ComplaintsPage() {
                 <label className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${visibility === "PUBLIC" ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:bg-gray-50"}`}>
                   <input type="radio" name="visibility" value="PUBLIC" checked={visibility === "PUBLIC"} onChange={() => setVisibility("PUBLIC")} className="mt-0.5" />
                   <div>
-                    <p className="text-sm font-medium text-gray-900">All Teachers & Parent</p>
-                    <p className="text-xs text-gray-500">Visible to all teachers in the school + the student&apos;s parent + admin</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">All Teachers & Parent</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Visible to all teachers in the school + the student&apos;s parent + admin</p>
                   </div>
                 </label>
                 <label className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${visibility === "PRIVATE" ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:bg-gray-50"}`}>
                   <input type="radio" name="visibility" value="PRIVATE" checked={visibility === "PRIVATE"} onChange={() => setVisibility("PRIVATE")} className="mt-0.5" />
                   <div>
-                    <p className="text-sm font-medium text-gray-900">Parent & Admin Only</p>
-                    <p className="text-xs text-gray-500">Only the student&apos;s parent and admin can see this. Other teachers cannot.</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Parent & Admin Only</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Only the student&apos;s parent and admin can see this. Other teachers cannot.</p>
                   </div>
                 </label>
               </div>

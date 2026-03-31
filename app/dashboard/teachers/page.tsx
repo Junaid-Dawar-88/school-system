@@ -78,7 +78,7 @@ export default function TeachersPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="flex items-center justify-between mb-6">
-        <div><h1 className="text-2xl font-bold">Teachers</h1><p className="text-gray-500">Add teachers — a login code will be emailed to them</p></div>
+        <div><h1 className="text-2xl font-bold">Teachers</h1><p className="text-gray-500 dark:text-gray-400">Add teachers — a login code will be emailed to them</p></div>
         <Button onClick={() => { setNewSubjects([]); setOpenAdd(true); }}>+ Add Teacher</Button>
       </div>
 
@@ -88,7 +88,7 @@ export default function TeachersPage() {
         <LabeledSelect value={filterSubject} onValueChange={setFilterSubject} placeholder="All Subjects" className="w-50" items={[{ value: "ALL", label: "All Subjects" }, ...SUBJECTS.map((s) => ({ value: s, label: s }))]} />
       </div>
 
-      <div className="bg-white rounded-2xl border shadow-sm overflow-x-auto">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 shadow-sm overflow-x-auto">
         <Table>
           <TableHeader><TableRow>
             <TableHead>Name</TableHead><TableHead>Email</TableHead><TableHead>Subjects</TableHead><TableHead>Classes</TableHead><TableHead className="text-right">Actions</TableHead>

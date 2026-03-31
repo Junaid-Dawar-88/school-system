@@ -68,11 +68,11 @@ export default function AttendancePage() {
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Attendance</h1>
-        <p className="text-gray-500">{isAdmin ? "View attendance history by class" : "Mark and manage attendance"}</p>
+        <p className="text-gray-500 dark:text-gray-400">{isAdmin ? "View attendance history by class" : "Mark and manage attendance"}</p>
       </div>
 
       {/* Class selector */}
-      <div className="bg-white rounded-xl border p-6 mb-6">
+      <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800 p-6 mb-6">
         <div className={`grid grid-cols-1 ${isAdmin ? "" : "md:grid-cols-2"} gap-4`}>
           <div><Label>Class</Label>
             <LabeledSelect value={classId} onValueChange={(v) => { setClassId(v); setRecords({}); }} placeholder="Select class" items={classes?.map((c) => ({ value: c.id, label: c.name })) || []} />
@@ -85,8 +85,8 @@ export default function AttendancePage() {
 
       {/* ─── Admin: History only ─── */}
       {classId && isAdmin && (
-        <div className="bg-white rounded-xl border">
-          <div className="p-4 border-b"><h2 className="text-lg font-bold">Attendance History — {classes?.find((c) => c.id === classId)?.name}</h2></div>
+        <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800">
+          <div className="p-4 border-b dark:border-gray-800"><h2 className="text-lg font-bold">Attendance History — {classes?.find((c) => c.id === classId)?.name}</h2></div>
           {historyByDate.size === 0 ? (
             <div className="p-8 text-center text-gray-400">No attendance records yet</div>
           ) : (
@@ -119,7 +119,7 @@ export default function AttendancePage() {
           </TabsList>
 
           <TabsContent value="mark">
-            <div className="bg-white rounded-xl border">
+            <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800">
               <div className="p-4 border-b flex items-center justify-between">
                 <h2 className="text-lg font-bold">{date}</h2>
                 <Button disabled={!classId || markMut.isPending} onClick={() => markMut.mutate({ classId, date, records: studs.map((s) => ({ studentId: s.id, status: getStatus(s.id) })) })}>
@@ -155,8 +155,8 @@ export default function AttendancePage() {
           </TabsContent>
 
           <TabsContent value="history">
-            <div className="bg-white rounded-xl border">
-              <div className="p-4 border-b"><h2 className="text-lg font-bold">Attendance History</h2></div>
+            <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800">
+              <div className="p-4 border-b dark:border-gray-800"><h2 className="text-lg font-bold">Attendance History</h2></div>
               {historyByDate.size === 0 ? (
                 <div className="p-8 text-center text-gray-400">No attendance records yet</div>
               ) : (
@@ -164,7 +164,7 @@ export default function AttendancePage() {
                   {Array.from(historyByDate.entries()).map(([dateKey, { dateRaw, records: recs }]) => (
                     <div key={dateKey} className="p-4">
                       <div className="flex items-center justify-between mb-3">
-                        <p className="text-sm font-semibold text-gray-700">{dateKey}</p>
+                        <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">{dateKey}</p>
                         <Button size="sm" variant="destructive" onClick={() => { if (confirm(`Delete all attendance for ${dateKey}?`)) deleteByDateMut.mutate({ classId, date: dateRaw }); }}>
                           Delete Day
                         </Button>

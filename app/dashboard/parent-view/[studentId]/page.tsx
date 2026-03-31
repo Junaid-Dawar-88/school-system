@@ -42,14 +42,14 @@ export default async function ParentViewPage({ params }: { params: Promise<{ stu
         Back
       </Link>
 
-      <div className="bg-white rounded-2xl border shadow-sm p-5 sm:p-6 mb-4 sm:mb-6">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 shadow-sm p-5 sm:p-6 mb-4 sm:mb-6">
         <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Student</p>
-        <p className="text-xl sm:text-2xl font-bold text-gray-900">{student.name}</p>
-        <div className="grid grid-cols-2 gap-2 mt-3 text-sm text-gray-500">
-          <p>Roll Number: <strong className="text-gray-700">{student.rollNumber}</strong></p>
-          <p>Father: <strong className="text-gray-700">{student.fatherName}</strong></p>
-          <p>Class: <strong className="text-gray-700">{student.class.name}</strong></p>
-          <p>Teachers: <strong className="text-gray-700">{student.class.teachers.map((t) => t.teacher.name).join(", ") || "None"}</strong></p>
+        <p className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{student.name}</p>
+        <div className="grid grid-cols-2 gap-2 mt-3 text-sm text-gray-500 dark:text-gray-400">
+          <p>Roll Number: <strong className="text-gray-700 dark:text-gray-300">{student.rollNumber}</strong></p>
+          <p>Father: <strong className="text-gray-700 dark:text-gray-300">{student.fatherName}</strong></p>
+          <p>Class: <strong className="text-gray-700 dark:text-gray-300">{student.class.name}</strong></p>
+          <p>Teachers: <strong className="text-gray-700 dark:text-gray-300">{student.class.teachers.map((t) => t.teacher.name).join(", ") || "None"}</strong></p>
         </div>
       </div>
 
@@ -62,12 +62,12 @@ export default async function ParentViewPage({ params }: { params: Promise<{ stu
         ].map((s) => (
           <div key={s.label} className={`rounded-xl border p-3 sm:p-4 text-center ${s.cls}`}>
             <p className="text-xl sm:text-2xl font-bold">{s.value}</p>
-            <p className="text-xs text-gray-500">{s.label}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{s.label}</p>
           </div>
         ))}
       </div>
 
-      <div className="bg-white rounded-2xl border shadow-sm p-5 sm:p-6">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl border dark:border-gray-800 shadow-sm p-5 sm:p-6">
         <p className="text-xs text-gray-400 uppercase tracking-wider mb-3">Attendance Records</p>
         {attendance.length === 0 ? (
           <p className="text-gray-400 text-sm">No attendance records yet.</p>

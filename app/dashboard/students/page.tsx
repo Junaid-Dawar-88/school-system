@@ -56,11 +56,11 @@ export default function StudentsPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="flex items-center justify-between mb-6">
-        <div><h1 className="text-2xl font-bold">Students</h1><p className="text-gray-500">Manage students in your classes</p></div>
+        <div><h1 className="text-2xl font-bold">Students</h1><p className="text-gray-500 dark:text-gray-400">Manage students in your classes</p></div>
         <Button onClick={() => { setClassId(""); setParentId(""); setOpen(true); }}>+ Add Student</Button>
       </div>
 
-      <div className="bg-white rounded-xl border">
+      <div className="bg-white dark:bg-gray-900 rounded-xl border dark:border-gray-800">
         <Table>
           <TableHeader>
             <TableRow>
