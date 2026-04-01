@@ -67,3 +67,73 @@ export type Exam = Prisma.ExamModel
  * 
  */
 export type Notification = Prisma.NotificationModel
+/**
+ * Model Grade
+ * 
+ */
+export type Grade = Prisma.GradeModel
+/**
+ * Model ReportCard
+ * 
+ */
+export type ReportCard = Prisma.ReportCardModel
+/**
+ * Model Fee
+ * 
+ */
+export type Fee = Prisma.FeeModel
+/**
+ * Model FeePayment
+ * 
+ */
+export type FeePayment = Prisma.FeePaymentModel
+/**
+ * Model Timetable
+ * 
+ */
+export type Timetable = Prisma.TimetableModel
+/**
+ * Model Assignment
+ * 
+ */
+export type Assignment = Prisma.AssignmentModel
+/**
+ * Model AssignmentSubmission
+ * 
+ */
+export type AssignmentSubmission = Prisma.AssignmentSubmissionModel
+/**
+ * Model LibraryBook
+ * 
+ */
+export type LibraryBook = Prisma.LibraryBookModel
+/**
+ * Model BookIssue
+ * 
+ */
+export type BookIssue = Prisma.BookIssueModel
+/**
+ * Model Vehicle
+ * 
+ */
+export type Vehicle = Prisma.VehicleModel
+/**
+ * Model TransportAssignment
+ * 
+ */
+export type TransportAssignment = Prisma.TransportAssignmentModel
+/**
+ * Model Event
+ * 
+ */
+export type Event = Prisma.EventModel
+/**
+ * Model LeaveRequest
+ * 
+ */
+export type LeaveRequest = Prisma.LeaveRequestModel
+/**
+ * Model Salary
+ * 
+ */
+export type Salary = Prisma.SalaryModel

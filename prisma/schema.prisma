@@ -30,6 +30,20 @@ model Organization {
   complaints     Complaint[]
   notifications  Notification[]
   exams          Exam[]
+  grades         Grade[]
+  reportCards    ReportCard[]
+  fees           Fee[]
+  feePayments    FeePayment[]
+  timetables     Timetable[]
+  assignments    Assignment[]
+  assignmentSubmissions AssignmentSubmission[]
+  libraryBooks   LibraryBook[]
+  bookIssues     BookIssue[]
+  vehicles       Vehicle[]
+  transportAssignments TransportAssignment[]
+  events         Event[]
+  leaveRequests  LeaveRequest[]
+  salaries       Salary[]
 }
 
 // ─── User ────────────────────────────────────────────────────
@@ -55,6 +69,11 @@ model User {
   complaintReplies  ComplaintReply[]
   notifications     Notification[]
   exams             Exam[]
+  grades            Grade[]           @relation("GradeTeacher")
+  timetables        Timetable[]
+  assignments       Assignment[]
+  leaveRequests     LeaveRequest[]
+  salaries          Salary[]
 }
 
 // ─── Class ───────────────────────────────────────────────────
@@ -69,6 +88,11 @@ model Class {
   students    Student[]
   attendances Attendance[]
   exams       Exam[]
+  grades      Grade[]
+  reportCards ReportCard[]
+  fees        Fee[]
+  timetables  Timetable[]
+  assignments Assignment[]
 
   createdAt DateTime @default(now())
 
@@ -107,6 +131,12 @@ model Student {
 
   attendances Attendance[]
   complaints  Complaint[]  @relation("ComplaintStudent")
+  grades      Grade[]
+  reportCards ReportCard[]
+  feePayments FeePayment[]
+  assignmentSubmissions AssignmentSubmission[]
+  bookIssues  BookIssue[]
+  transportAssignments TransportAssignment[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -203,6 +233,8 @@ model Exam {
   organizationId String
   organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
 
+  grades Grade[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -228,4 +260,333 @@ enum NotificationType {
   COMPLAINT
   EXAM
   GENERAL
+}
+
+// ─── Grade ───────────────────────────────────────────────────
+model Grade {
+  id       String @id @default(uuid())
+  score    Float
+  maxScore Float  @default(100)
+  grade    String?
+  remarks  String?
+  subject  String
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  classId String
+  class   Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  examId String
+  exam   Exam @relation(fields: [examId], references: [id], onDelete: Cascade)
+
+  teacherId String
+  teacher   User @relation("GradeTeacher", fields: [teacherId], references: [id])
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([studentId, examId, subject])
+}
+
+// ─── Report Card ─────────────────────────────────────────────
+model ReportCard {
+  id         String @id @default(uuid())
+  term       String
+  year       Int
+  totalScore Float
+  maxTotal   Float
+  percentage Float
+  rank       Int?
+  remarks    String?
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  classId String
+  class   Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([studentId, term, year])
+}
+
+// ─── Fee ─────────────────────────────────────────────────────
+model Fee {
+  id      String   @id @default(uuid())
+  title   String
+  amount  Float
+  dueDate DateTime
+
+  classId String
+  class   Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  payments FeePayment[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Fee Payment ─────────────────────────────────────────────
+model FeePayment {
+  id            String        @id @default(uuid())
+  amountPaid    Float
+  paidDate      DateTime      @default(now())
+  status        PaymentStatus @default(PENDING)
+  receiptNumber String?
+
+  feeId String
+  fee   Fee @relation(fields: [feeId], references: [id], onDelete: Cascade)
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  PARTIAL
+  OVERDUE
+}
+
+// ─── Timetable ───────────────────────────────────────────────
+model Timetable {
+  id        String @id @default(uuid())
+  dayOfWeek DayOfWeek
+  startTime String
+  endTime   String
+  subject   String
+  room      String?
+
+  classId String
+  class   Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  teacherId String
+  teacher   User @relation(fields: [teacherId], references: [id])
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([classId, dayOfWeek, startTime])
+}
+
+enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+// ─── Assignment ──────────────────────────────────────────────
+model Assignment {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  dueDate     DateTime
+  subject     String
+
+  classId String
+  class   Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  teacherId String
+  teacher   User @relation(fields: [teacherId], references: [id])
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  submissions AssignmentSubmission[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Assignment Submission ───────────────────────────────────
+model AssignmentSubmission {
+  id          String   @id @default(uuid())
+  content     String?
+  submittedAt DateTime @default(now())
+  grade       Float?
+  feedback    String?
+
+  assignmentId String
+  assignment   Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([assignmentId, studentId])
+}
+
+// ─── Library Book ────────────────────────────────────────────
+model LibraryBook {
+  id              String @id @default(uuid())
+  title           String
+  author          String
+  isbn            String?
+  category        String?
+  totalCopies     Int    @default(1)
+  availableCopies Int    @default(1)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  issues BookIssue[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Book Issue ──────────────────────────────────────────────
+model BookIssue {
+  id         String    @id @default(uuid())
+  issueDate  DateTime  @default(now())
+  dueDate    DateTime
+  returnDate DateTime?
+  fine       Float?
+
+  bookId String
+  book   LibraryBook @relation(fields: [bookId], references: [id], onDelete: Cascade)
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Vehicle ─────────────────────────────────────────────────
+model Vehicle {
+  id            String @id @default(uuid())
+  vehicleNumber String
+  driverName    String
+  driverPhone   String
+  capacity      Int
+  route         String
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  assignments TransportAssignment[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Transport Assignment ────────────────────────────────────
+model TransportAssignment {
+  id       String @id @default(uuid())
+  stopName String
+
+  vehicleId String
+  vehicle   Vehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([vehicleId, studentId])
+}
+
+// ─── Event ───────────────────────────────────────────────────
+model Event {
+  id          String    @id @default(uuid())
+  title       String
+  description String?
+  startDate   DateTime
+  endDate     DateTime
+  type        EventType
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum EventType {
+  HOLIDAY
+  EVENT
+  MEETING
+  EXAM_SCHEDULE
+}
+
+// ─── Leave Request ───────────────────────────────────────────
+model LeaveRequest {
+  id        String      @id @default(uuid())
+  startDate DateTime
+  endDate   DateTime
+  reason    String
+  status    LeaveStatus @default(PENDING)
+
+  userId String
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum LeaveStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+// ─── Salary ──────────────────────────────────────────────────
+model Salary {
+  id       String        @id @default(uuid())
+  amount   Float
+  month    Int
+  year     Int
+  status   PaymentStatus @default(PENDING)
+  paidDate DateTime?
+
+  userId String
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, month, year])
 }

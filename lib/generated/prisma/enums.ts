@@ -50,3 +50,45 @@ export const NotificationType = {
 } as const
 
 export type NotificationType = (typeof NotificationType)[keyof typeof NotificationType]
+
+
+export const PaymentStatus = {
+  PENDING: 'PENDING',
+  PAID: 'PAID',
+  PARTIAL: 'PARTIAL',
+  OVERDUE: 'OVERDUE'
+} as const
+
+export type PaymentStatus = (typeof PaymentStatus)[keyof typeof PaymentStatus]
+
+
+export const DayOfWeek = {
+  MONDAY: 'MONDAY',
+  TUESDAY: 'TUESDAY',
+  WEDNESDAY: 'WEDNESDAY',
+  THURSDAY: 'THURSDAY',
+  FRIDAY: 'FRIDAY',
+  SATURDAY: 'SATURDAY',
+  SUNDAY: 'SUNDAY'
+} as const
+
+export type DayOfWeek = (typeof DayOfWeek)[keyof typeof DayOfWeek]
+
+
+export const EventType = {
+  HOLIDAY: 'HOLIDAY',
+  EVENT: 'EVENT',
+  MEETING: 'MEETING',
+  EXAM_SCHEDULE: 'EXAM_SCHEDULE'
+} as const
+
+export type EventType = (typeof EventType)[keyof typeof EventType]
+
+
+export const LeaveStatus = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED'
+} as const
+
+export type LeaveStatus = (typeof LeaveStatus)[keyof typeof LeaveStatus]

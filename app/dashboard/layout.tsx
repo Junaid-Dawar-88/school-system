@@ -12,9 +12,9 @@ export default async function DashboardLayout({ children }: { children: React.Re
   return (
     <TRPCProvider>
       <NuqsAdapter>
-        <div className="flex min-h-screen bg-gray-50">
+        <div className="flex min-h-screen bg-slate-50 dark:bg-slate-950">
           <Sidebar user={user} />
-          <main className="flex-1 overflow-auto pt-14 lg:pt-0 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">{children}</main>
+          <main className="flex-1 min-w-0 overflow-auto pt-14 lg:pt-0 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">{children}</main>
         </div>
         <Toaster richColors position="top-right" />
       </NuqsAdapter>

@@ -190,6 +190,20 @@ export type OrganizationWhereInput = {
   complaints?: Prisma.ComplaintListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
   exams?: Prisma.ExamListRelationFilter
+  grades?: Prisma.GradeListRelationFilter
+  reportCards?: Prisma.ReportCardListRelationFilter
+  fees?: Prisma.FeeListRelationFilter
+  feePayments?: Prisma.FeePaymentListRelationFilter
+  timetables?: Prisma.TimetableListRelationFilter
+  assignments?: Prisma.AssignmentListRelationFilter
+  assignmentSubmissions?: Prisma.AssignmentSubmissionListRelationFilter
+  libraryBooks?: Prisma.LibraryBookListRelationFilter
+  bookIssues?: Prisma.BookIssueListRelationFilter
+  vehicles?: Prisma.VehicleListRelationFilter
+  transportAssignments?: Prisma.TransportAssignmentListRelationFilter
+  events?: Prisma.EventListRelationFilter
+  leaveRequests?: Prisma.LeaveRequestListRelationFilter
+  salaries?: Prisma.SalaryListRelationFilter
 }
 
 export type OrganizationOrderByWithRelationInput = {
@@ -206,6 +220,20 @@ export type OrganizationOrderByWithRelationInput = {
   complaints?: Prisma.ComplaintOrderByRelationAggregateInput
   notifications?: Prisma.NotificationOrderByRelationAggregateInput
   exams?: Prisma.ExamOrderByRelationAggregateInput
+  grades?: Prisma.GradeOrderByRelationAggregateInput
+  reportCards?: Prisma.ReportCardOrderByRelationAggregateInput
+  fees?: Prisma.FeeOrderByRelationAggregateInput
+  feePayments?: Prisma.FeePaymentOrderByRelationAggregateInput
+  timetables?: Prisma.TimetableOrderByRelationAggregateInput
+  assignments?: Prisma.AssignmentOrderByRelationAggregateInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionOrderByRelationAggregateInput
+  libraryBooks?: Prisma.LibraryBookOrderByRelationAggregateInput
+  bookIssues?: Prisma.BookIssueOrderByRelationAggregateInput
+  vehicles?: Prisma.VehicleOrderByRelationAggregateInput
+  transportAssignments?: Prisma.TransportAssignmentOrderByRelationAggregateInput
+  events?: Prisma.EventOrderByRelationAggregateInput
+  leaveRequests?: Prisma.LeaveRequestOrderByRelationAggregateInput
+  salaries?: Prisma.SalaryOrderByRelationAggregateInput
 }
 
 export type OrganizationWhereUniqueInput = Prisma.AtLeast<{
@@ -225,6 +253,20 @@ export type OrganizationWhereUniqueInput = Prisma.AtLeast<{
   complaints?: Prisma.ComplaintListRelationFilter
   notifications?: Prisma.NotificationListRelationFilter
   exams?: Prisma.ExamListRelationFilter
+  grades?: Prisma.GradeListRelationFilter
+  reportCards?: Prisma.ReportCardListRelationFilter
+  fees?: Prisma.FeeListRelationFilter
+  feePayments?: Prisma.FeePaymentListRelationFilter
+  timetables?: Prisma.TimetableListRelationFilter
+  assignments?: Prisma.AssignmentListRelationFilter
+  assignmentSubmissions?: Prisma.AssignmentSubmissionListRelationFilter
+  libraryBooks?: Prisma.LibraryBookListRelationFilter
+  bookIssues?: Prisma.BookIssueListRelationFilter
+  vehicles?: Prisma.VehicleListRelationFilter
+  transportAssignments?: Prisma.TransportAssignmentListRelationFilter
+  events?: Prisma.EventListRelationFilter
+  leaveRequests?: Prisma.LeaveRequestListRelationFilter
+  salaries?: Prisma.SalaryListRelationFilter
 }, "id" | "inviteCode" | "ownerId">
 
 export type OrganizationOrderByWithAggregationInput = {
@@ -262,6 +304,20 @@ export type OrganizationCreateInput = {
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateInput = {
@@ -277,6 +333,20 @@ export type OrganizationUncheckedCreateInput = {
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUpdateInput = {
@@ -292,6 +362,20 @@ export type OrganizationUpdateInput = {
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateInput = {
@@ -307,6 +391,20 @@ export type OrganizationUncheckedUpdateInput = {
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateManyInput = {
@@ -506,6 +604,202 @@ export type OrganizationUpdateOneRequiredWithoutNotificationsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutNotificationsInput, Prisma.OrganizationUpdateWithoutNotificationsInput>, Prisma.OrganizationUncheckedUpdateWithoutNotificationsInput>
 }
 
+export type OrganizationCreateNestedOneWithoutGradesInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutGradesInput, Prisma.OrganizationUncheckedCreateWithoutGradesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutGradesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutGradesNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutGradesInput, Prisma.OrganizationUncheckedCreateWithoutGradesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutGradesInput
+  upsert?: Prisma.OrganizationUpsertWithoutGradesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutGradesInput, Prisma.OrganizationUpdateWithoutGradesInput>, Prisma.OrganizationUncheckedUpdateWithoutGradesInput>
+}
+
+export type OrganizationCreateNestedOneWithoutReportCardsInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutReportCardsInput, Prisma.OrganizationUncheckedCreateWithoutReportCardsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutReportCardsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutReportCardsNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutReportCardsInput, Prisma.OrganizationUncheckedCreateWithoutReportCardsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutReportCardsInput
+  upsert?: Prisma.OrganizationUpsertWithoutReportCardsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutReportCardsInput, Prisma.OrganizationUpdateWithoutReportCardsInput>, Prisma.OrganizationUncheckedUpdateWithoutReportCardsInput>
+}
+
+export type OrganizationCreateNestedOneWithoutFeesInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutFeesInput, Prisma.OrganizationUncheckedCreateWithoutFeesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutFeesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutFeesNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutFeesInput, Prisma.OrganizationUncheckedCreateWithoutFeesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutFeesInput
+  upsert?: Prisma.OrganizationUpsertWithoutFeesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutFeesInput, Prisma.OrganizationUpdateWithoutFeesInput>, Prisma.OrganizationUncheckedUpdateWithoutFeesInput>
+}
+
+export type OrganizationCreateNestedOneWithoutFeePaymentsInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutFeePaymentsInput, Prisma.OrganizationUncheckedCreateWithoutFeePaymentsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutFeePaymentsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutFeePaymentsNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutFeePaymentsInput, Prisma.OrganizationUncheckedCreateWithoutFeePaymentsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutFeePaymentsInput
+  upsert?: Prisma.OrganizationUpsertWithoutFeePaymentsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutFeePaymentsInput, Prisma.OrganizationUpdateWithoutFeePaymentsInput>, Prisma.OrganizationUncheckedUpdateWithoutFeePaymentsInput>
+}
+
+export type OrganizationCreateNestedOneWithoutTimetablesInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutTimetablesInput, Prisma.OrganizationUncheckedCreateWithoutTimetablesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutTimetablesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutTimetablesNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutTimetablesInput, Prisma.OrganizationUncheckedCreateWithoutTimetablesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutTimetablesInput
+  upsert?: Prisma.OrganizationUpsertWithoutTimetablesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutTimetablesInput, Prisma.OrganizationUpdateWithoutTimetablesInput>, Prisma.OrganizationUncheckedUpdateWithoutTimetablesInput>
+}
+
+export type OrganizationCreateNestedOneWithoutAssignmentsInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutAssignmentsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutAssignmentsNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutAssignmentsInput
+  upsert?: Prisma.OrganizationUpsertWithoutAssignmentsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutAssignmentsInput, Prisma.OrganizationUpdateWithoutAssignmentsInput>, Prisma.OrganizationUncheckedUpdateWithoutAssignmentsInput>
+}
+
+export type OrganizationCreateNestedOneWithoutAssignmentSubmissionsInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentSubmissionsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentSubmissionsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutAssignmentSubmissionsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutAssignmentSubmissionsNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentSubmissionsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentSubmissionsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutAssignmentSubmissionsInput
+  upsert?: Prisma.OrganizationUpsertWithoutAssignmentSubmissionsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutAssignmentSubmissionsInput, Prisma.OrganizationUpdateWithoutAssignmentSubmissionsInput>, Prisma.OrganizationUncheckedUpdateWithoutAssignmentSubmissionsInput>
+}
+
+export type OrganizationCreateNestedOneWithoutLibraryBooksInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutLibraryBooksInput, Prisma.OrganizationUncheckedCreateWithoutLibraryBooksInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutLibraryBooksInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutLibraryBooksNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutLibraryBooksInput, Prisma.OrganizationUncheckedCreateWithoutLibraryBooksInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutLibraryBooksInput
+  upsert?: Prisma.OrganizationUpsertWithoutLibraryBooksInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutLibraryBooksInput, Prisma.OrganizationUpdateWithoutLibraryBooksInput>, Prisma.OrganizationUncheckedUpdateWithoutLibraryBooksInput>
+}
+
+export type OrganizationCreateNestedOneWithoutBookIssuesInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutBookIssuesInput, Prisma.OrganizationUncheckedCreateWithoutBookIssuesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutBookIssuesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutBookIssuesNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutBookIssuesInput, Prisma.OrganizationUncheckedCreateWithoutBookIssuesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutBookIssuesInput
+  upsert?: Prisma.OrganizationUpsertWithoutBookIssuesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutBookIssuesInput, Prisma.OrganizationUpdateWithoutBookIssuesInput>, Prisma.OrganizationUncheckedUpdateWithoutBookIssuesInput>
+}
+
+export type OrganizationCreateNestedOneWithoutVehiclesInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutVehiclesInput, Prisma.OrganizationUncheckedCreateWithoutVehiclesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutVehiclesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutVehiclesNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutVehiclesInput, Prisma.OrganizationUncheckedCreateWithoutVehiclesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutVehiclesInput
+  upsert?: Prisma.OrganizationUpsertWithoutVehiclesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutVehiclesInput, Prisma.OrganizationUpdateWithoutVehiclesInput>, Prisma.OrganizationUncheckedUpdateWithoutVehiclesInput>
+}
+
+export type OrganizationCreateNestedOneWithoutTransportAssignmentsInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutTransportAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutTransportAssignmentsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutTransportAssignmentsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutTransportAssignmentsNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutTransportAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutTransportAssignmentsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutTransportAssignmentsInput
+  upsert?: Prisma.OrganizationUpsertWithoutTransportAssignmentsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutTransportAssignmentsInput, Prisma.OrganizationUpdateWithoutTransportAssignmentsInput>, Prisma.OrganizationUncheckedUpdateWithoutTransportAssignmentsInput>
+}
+
+export type OrganizationCreateNestedOneWithoutEventsInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutEventsInput, Prisma.OrganizationUncheckedCreateWithoutEventsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutEventsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutEventsNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutEventsInput, Prisma.OrganizationUncheckedCreateWithoutEventsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutEventsInput
+  upsert?: Prisma.OrganizationUpsertWithoutEventsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutEventsInput, Prisma.OrganizationUpdateWithoutEventsInput>, Prisma.OrganizationUncheckedUpdateWithoutEventsInput>
+}
+
+export type OrganizationCreateNestedOneWithoutLeaveRequestsInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutLeaveRequestsInput, Prisma.OrganizationUncheckedCreateWithoutLeaveRequestsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutLeaveRequestsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutLeaveRequestsNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutLeaveRequestsInput, Prisma.OrganizationUncheckedCreateWithoutLeaveRequestsInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutLeaveRequestsInput
+  upsert?: Prisma.OrganizationUpsertWithoutLeaveRequestsInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutLeaveRequestsInput, Prisma.OrganizationUpdateWithoutLeaveRequestsInput>, Prisma.OrganizationUncheckedUpdateWithoutLeaveRequestsInput>
+}
+
+export type OrganizationCreateNestedOneWithoutSalariesInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutSalariesInput, Prisma.OrganizationUncheckedCreateWithoutSalariesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutSalariesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+}
+
+export type OrganizationUpdateOneRequiredWithoutSalariesNestedInput = {
+  create?: Prisma.XOR<Prisma.OrganizationCreateWithoutSalariesInput, Prisma.OrganizationUncheckedCreateWithoutSalariesInput>
+  connectOrCreate?: Prisma.OrganizationCreateOrConnectWithoutSalariesInput
+  upsert?: Prisma.OrganizationUpsertWithoutSalariesInput
+  connect?: Prisma.OrganizationWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.OrganizationUpdateToOneWithWhereWithoutSalariesInput, Prisma.OrganizationUpdateWithoutSalariesInput>, Prisma.OrganizationUncheckedUpdateWithoutSalariesInput>
+}
+
 export type OrganizationCreateWithoutUsersInput = {
   id?: string
   name: string
@@ -518,6 +812,20 @@ export type OrganizationCreateWithoutUsersInput = {
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutUsersInput = {
@@ -532,6 +840,20 @@ export type OrganizationUncheckedCreateWithoutUsersInput = {
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutUsersInput = {
@@ -551,6 +873,20 @@ export type OrganizationCreateWithoutOwnerInput = {
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutOwnerInput = {
@@ -565,6 +901,20 @@ export type OrganizationUncheckedCreateWithoutOwnerInput = {
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutOwnerInput = {
@@ -595,6 +945,20 @@ export type OrganizationUpdateWithoutUsersInput = {
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutUsersInput = {
@@ -609,6 +973,20 @@ export type OrganizationUncheckedUpdateWithoutUsersInput = {
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUpsertWithoutOwnerInput = {
@@ -634,6 +1012,20 @@ export type OrganizationUpdateWithoutOwnerInput = {
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutOwnerInput = {
@@ -648,6 +1040,20 @@ export type OrganizationUncheckedUpdateWithoutOwnerInput = {
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutClassesInput = {
@@ -662,6 +1068,20 @@ export type OrganizationCreateWithoutClassesInput = {
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutClassesInput = {
@@ -676,6 +1096,20 @@ export type OrganizationUncheckedCreateWithoutClassesInput = {
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutClassesInput = {
@@ -706,6 +1140,20 @@ export type OrganizationUpdateWithoutClassesInput = {
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutClassesInput = {
@@ -720,6 +1168,20 @@ export type OrganizationUncheckedUpdateWithoutClassesInput = {
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutStudentsInput = {
@@ -734,6 +1196,20 @@ export type OrganizationCreateWithoutStudentsInput = {
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutStudentsInput = {
@@ -748,6 +1224,20 @@ export type OrganizationUncheckedCreateWithoutStudentsInput = {
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutStudentsInput = {
@@ -778,6 +1268,20 @@ export type OrganizationUpdateWithoutStudentsInput = {
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutStudentsInput = {
@@ -792,6 +1296,20 @@ export type OrganizationUncheckedUpdateWithoutStudentsInput = {
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutAttendancesInput = {
@@ -806,6 +1324,20 @@ export type OrganizationCreateWithoutAttendancesInput = {
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutAttendancesInput = {
@@ -820,6 +1352,20 @@ export type OrganizationUncheckedCreateWithoutAttendancesInput = {
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutAttendancesInput = {
@@ -850,6 +1396,20 @@ export type OrganizationUpdateWithoutAttendancesInput = {
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutAttendancesInput = {
@@ -864,6 +1424,20 @@ export type OrganizationUncheckedUpdateWithoutAttendancesInput = {
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutComplaintsInput = {
@@ -878,6 +1452,20 @@ export type OrganizationCreateWithoutComplaintsInput = {
   attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutComplaintsInput = {
@@ -892,6 +1480,20 @@ export type OrganizationUncheckedCreateWithoutComplaintsInput = {
   attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutComplaintsInput = {
@@ -922,6 +1524,20 @@ export type OrganizationUpdateWithoutComplaintsInput = {
   attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutComplaintsInput = {
@@ -936,6 +1552,20 @@ export type OrganizationUncheckedUpdateWithoutComplaintsInput = {
   attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutExamsInput = {
@@ -950,6 +1580,20 @@ export type OrganizationCreateWithoutExamsInput = {
   attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutExamsInput = {
@@ -964,6 +1608,20 @@ export type OrganizationUncheckedCreateWithoutExamsInput = {
   attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutExamsInput = {
@@ -994,6 +1652,20 @@ export type OrganizationUpdateWithoutExamsInput = {
   attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutExamsInput = {
@@ -1008,6 +1680,20 @@ export type OrganizationUncheckedUpdateWithoutExamsInput = {
   attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationCreateWithoutNotificationsInput = {
@@ -1022,6 +1708,20 @@ export type OrganizationCreateWithoutNotificationsInput = {
   attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
   complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationUncheckedCreateWithoutNotificationsInput = {
@@ -1036,6 +1736,20 @@ export type OrganizationUncheckedCreateWithoutNotificationsInput = {
   attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
   complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
   exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
 }
 
 export type OrganizationCreateOrConnectWithoutNotificationsInput = {
@@ -1066,6 +1780,20 @@ export type OrganizationUpdateWithoutNotificationsInput = {
   attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
   complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
 }
 
 export type OrganizationUncheckedUpdateWithoutNotificationsInput = {
@@ -1080,6 +1808,1812 @@ export type OrganizationUncheckedUpdateWithoutNotificationsInput = {
   attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
   complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
   exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutGradesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutGradesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutGradesInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutGradesInput, Prisma.OrganizationUncheckedCreateWithoutGradesInput>
+}
+
+export type OrganizationUpsertWithoutGradesInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutGradesInput, Prisma.OrganizationUncheckedUpdateWithoutGradesInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutGradesInput, Prisma.OrganizationUncheckedCreateWithoutGradesInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutGradesInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutGradesInput, Prisma.OrganizationUncheckedUpdateWithoutGradesInput>
+}
+
+export type OrganizationUpdateWithoutGradesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutGradesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutReportCardsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutReportCardsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutReportCardsInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutReportCardsInput, Prisma.OrganizationUncheckedCreateWithoutReportCardsInput>
+}
+
+export type OrganizationUpsertWithoutReportCardsInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutReportCardsInput, Prisma.OrganizationUncheckedUpdateWithoutReportCardsInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutReportCardsInput, Prisma.OrganizationUncheckedCreateWithoutReportCardsInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutReportCardsInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutReportCardsInput, Prisma.OrganizationUncheckedUpdateWithoutReportCardsInput>
+}
+
+export type OrganizationUpdateWithoutReportCardsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutReportCardsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutFeesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutFeesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutFeesInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutFeesInput, Prisma.OrganizationUncheckedCreateWithoutFeesInput>
+}
+
+export type OrganizationUpsertWithoutFeesInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutFeesInput, Prisma.OrganizationUncheckedUpdateWithoutFeesInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutFeesInput, Prisma.OrganizationUncheckedCreateWithoutFeesInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutFeesInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutFeesInput, Prisma.OrganizationUncheckedUpdateWithoutFeesInput>
+}
+
+export type OrganizationUpdateWithoutFeesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutFeesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutFeePaymentsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutFeePaymentsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutFeePaymentsInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutFeePaymentsInput, Prisma.OrganizationUncheckedCreateWithoutFeePaymentsInput>
+}
+
+export type OrganizationUpsertWithoutFeePaymentsInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutFeePaymentsInput, Prisma.OrganizationUncheckedUpdateWithoutFeePaymentsInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutFeePaymentsInput, Prisma.OrganizationUncheckedCreateWithoutFeePaymentsInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutFeePaymentsInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutFeePaymentsInput, Prisma.OrganizationUncheckedUpdateWithoutFeePaymentsInput>
+}
+
+export type OrganizationUpdateWithoutFeePaymentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutFeePaymentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutTimetablesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutTimetablesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutTimetablesInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutTimetablesInput, Prisma.OrganizationUncheckedCreateWithoutTimetablesInput>
+}
+
+export type OrganizationUpsertWithoutTimetablesInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutTimetablesInput, Prisma.OrganizationUncheckedUpdateWithoutTimetablesInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutTimetablesInput, Prisma.OrganizationUncheckedCreateWithoutTimetablesInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutTimetablesInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutTimetablesInput, Prisma.OrganizationUncheckedUpdateWithoutTimetablesInput>
+}
+
+export type OrganizationUpdateWithoutTimetablesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutTimetablesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutAssignmentsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutAssignmentsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutAssignmentsInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentsInput>
+}
+
+export type OrganizationUpsertWithoutAssignmentsInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutAssignmentsInput, Prisma.OrganizationUncheckedUpdateWithoutAssignmentsInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentsInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutAssignmentsInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutAssignmentsInput, Prisma.OrganizationUncheckedUpdateWithoutAssignmentsInput>
+}
+
+export type OrganizationUpdateWithoutAssignmentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutAssignmentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutAssignmentSubmissionsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutAssignmentSubmissionsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutAssignmentSubmissionsInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentSubmissionsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentSubmissionsInput>
+}
+
+export type OrganizationUpsertWithoutAssignmentSubmissionsInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutAssignmentSubmissionsInput, Prisma.OrganizationUncheckedUpdateWithoutAssignmentSubmissionsInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutAssignmentSubmissionsInput, Prisma.OrganizationUncheckedCreateWithoutAssignmentSubmissionsInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutAssignmentSubmissionsInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutAssignmentSubmissionsInput, Prisma.OrganizationUncheckedUpdateWithoutAssignmentSubmissionsInput>
+}
+
+export type OrganizationUpdateWithoutAssignmentSubmissionsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutAssignmentSubmissionsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutLibraryBooksInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutLibraryBooksInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutLibraryBooksInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutLibraryBooksInput, Prisma.OrganizationUncheckedCreateWithoutLibraryBooksInput>
+}
+
+export type OrganizationUpsertWithoutLibraryBooksInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutLibraryBooksInput, Prisma.OrganizationUncheckedUpdateWithoutLibraryBooksInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutLibraryBooksInput, Prisma.OrganizationUncheckedCreateWithoutLibraryBooksInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutLibraryBooksInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutLibraryBooksInput, Prisma.OrganizationUncheckedUpdateWithoutLibraryBooksInput>
+}
+
+export type OrganizationUpdateWithoutLibraryBooksInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutLibraryBooksInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutBookIssuesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutBookIssuesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutBookIssuesInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutBookIssuesInput, Prisma.OrganizationUncheckedCreateWithoutBookIssuesInput>
+}
+
+export type OrganizationUpsertWithoutBookIssuesInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutBookIssuesInput, Prisma.OrganizationUncheckedUpdateWithoutBookIssuesInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutBookIssuesInput, Prisma.OrganizationUncheckedCreateWithoutBookIssuesInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutBookIssuesInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutBookIssuesInput, Prisma.OrganizationUncheckedUpdateWithoutBookIssuesInput>
+}
+
+export type OrganizationUpdateWithoutBookIssuesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutBookIssuesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutVehiclesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutVehiclesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutVehiclesInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutVehiclesInput, Prisma.OrganizationUncheckedCreateWithoutVehiclesInput>
+}
+
+export type OrganizationUpsertWithoutVehiclesInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutVehiclesInput, Prisma.OrganizationUncheckedUpdateWithoutVehiclesInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutVehiclesInput, Prisma.OrganizationUncheckedCreateWithoutVehiclesInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutVehiclesInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutVehiclesInput, Prisma.OrganizationUncheckedUpdateWithoutVehiclesInput>
+}
+
+export type OrganizationUpdateWithoutVehiclesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutVehiclesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutTransportAssignmentsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutTransportAssignmentsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutTransportAssignmentsInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutTransportAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutTransportAssignmentsInput>
+}
+
+export type OrganizationUpsertWithoutTransportAssignmentsInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutTransportAssignmentsInput, Prisma.OrganizationUncheckedUpdateWithoutTransportAssignmentsInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutTransportAssignmentsInput, Prisma.OrganizationUncheckedCreateWithoutTransportAssignmentsInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutTransportAssignmentsInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutTransportAssignmentsInput, Prisma.OrganizationUncheckedUpdateWithoutTransportAssignmentsInput>
+}
+
+export type OrganizationUpdateWithoutTransportAssignmentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutTransportAssignmentsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutEventsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutEventsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutEventsInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutEventsInput, Prisma.OrganizationUncheckedCreateWithoutEventsInput>
+}
+
+export type OrganizationUpsertWithoutEventsInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutEventsInput, Prisma.OrganizationUncheckedUpdateWithoutEventsInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutEventsInput, Prisma.OrganizationUncheckedCreateWithoutEventsInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutEventsInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutEventsInput, Prisma.OrganizationUncheckedUpdateWithoutEventsInput>
+}
+
+export type OrganizationUpdateWithoutEventsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutEventsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutLeaveRequestsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutLeaveRequestsInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  salaries?: Prisma.SalaryUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutLeaveRequestsInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutLeaveRequestsInput, Prisma.OrganizationUncheckedCreateWithoutLeaveRequestsInput>
+}
+
+export type OrganizationUpsertWithoutLeaveRequestsInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutLeaveRequestsInput, Prisma.OrganizationUncheckedUpdateWithoutLeaveRequestsInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutLeaveRequestsInput, Prisma.OrganizationUncheckedCreateWithoutLeaveRequestsInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutLeaveRequestsInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutLeaveRequestsInput, Prisma.OrganizationUncheckedUpdateWithoutLeaveRequestsInput>
+}
+
+export type OrganizationUpdateWithoutLeaveRequestsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutLeaveRequestsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  salaries?: Prisma.SalaryUncheckedUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationCreateWithoutSalariesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  owner: Prisma.UserCreateNestedOneWithoutOwnedOrgInput
+  users?: Prisma.UserCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationUncheckedCreateWithoutSalariesInput = {
+  id?: string
+  name: string
+  inviteCode?: string
+  createdAt?: Date | string
+  ownerId: string
+  users?: Prisma.UserUncheckedCreateNestedManyWithoutOrganizationInput
+  classes?: Prisma.ClassUncheckedCreateNestedManyWithoutOrganizationInput
+  students?: Prisma.StudentUncheckedCreateNestedManyWithoutOrganizationInput
+  attendances?: Prisma.AttendanceUncheckedCreateNestedManyWithoutOrganizationInput
+  complaints?: Prisma.ComplaintUncheckedCreateNestedManyWithoutOrganizationInput
+  notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutOrganizationInput
+  exams?: Prisma.ExamUncheckedCreateNestedManyWithoutOrganizationInput
+  grades?: Prisma.GradeUncheckedCreateNestedManyWithoutOrganizationInput
+  reportCards?: Prisma.ReportCardUncheckedCreateNestedManyWithoutOrganizationInput
+  fees?: Prisma.FeeUncheckedCreateNestedManyWithoutOrganizationInput
+  feePayments?: Prisma.FeePaymentUncheckedCreateNestedManyWithoutOrganizationInput
+  timetables?: Prisma.TimetableUncheckedCreateNestedManyWithoutOrganizationInput
+  assignments?: Prisma.AssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedCreateNestedManyWithoutOrganizationInput
+  libraryBooks?: Prisma.LibraryBookUncheckedCreateNestedManyWithoutOrganizationInput
+  bookIssues?: Prisma.BookIssueUncheckedCreateNestedManyWithoutOrganizationInput
+  vehicles?: Prisma.VehicleUncheckedCreateNestedManyWithoutOrganizationInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedCreateNestedManyWithoutOrganizationInput
+  events?: Prisma.EventUncheckedCreateNestedManyWithoutOrganizationInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedCreateNestedManyWithoutOrganizationInput
+}
+
+export type OrganizationCreateOrConnectWithoutSalariesInput = {
+  where: Prisma.OrganizationWhereUniqueInput
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutSalariesInput, Prisma.OrganizationUncheckedCreateWithoutSalariesInput>
+}
+
+export type OrganizationUpsertWithoutSalariesInput = {
+  update: Prisma.XOR<Prisma.OrganizationUpdateWithoutSalariesInput, Prisma.OrganizationUncheckedUpdateWithoutSalariesInput>
+  create: Prisma.XOR<Prisma.OrganizationCreateWithoutSalariesInput, Prisma.OrganizationUncheckedCreateWithoutSalariesInput>
+  where?: Prisma.OrganizationWhereInput
+}
+
+export type OrganizationUpdateToOneWithWhereWithoutSalariesInput = {
+  where?: Prisma.OrganizationWhereInput
+  data: Prisma.XOR<Prisma.OrganizationUpdateWithoutSalariesInput, Prisma.OrganizationUncheckedUpdateWithoutSalariesInput>
+}
+
+export type OrganizationUpdateWithoutSalariesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  owner?: Prisma.UserUpdateOneRequiredWithoutOwnedOrgNestedInput
+  users?: Prisma.UserUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUpdateManyWithoutOrganizationNestedInput
+}
+
+export type OrganizationUncheckedUpdateWithoutSalariesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  inviteCode?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  ownerId?: Prisma.StringFieldUpdateOperationsInput | string
+  users?: Prisma.UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  classes?: Prisma.ClassUncheckedUpdateManyWithoutOrganizationNestedInput
+  students?: Prisma.StudentUncheckedUpdateManyWithoutOrganizationNestedInput
+  attendances?: Prisma.AttendanceUncheckedUpdateManyWithoutOrganizationNestedInput
+  complaints?: Prisma.ComplaintUncheckedUpdateManyWithoutOrganizationNestedInput
+  notifications?: Prisma.NotificationUncheckedUpdateManyWithoutOrganizationNestedInput
+  exams?: Prisma.ExamUncheckedUpdateManyWithoutOrganizationNestedInput
+  grades?: Prisma.GradeUncheckedUpdateManyWithoutOrganizationNestedInput
+  reportCards?: Prisma.ReportCardUncheckedUpdateManyWithoutOrganizationNestedInput
+  fees?: Prisma.FeeUncheckedUpdateManyWithoutOrganizationNestedInput
+  feePayments?: Prisma.FeePaymentUncheckedUpdateManyWithoutOrganizationNestedInput
+  timetables?: Prisma.TimetableUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignments?: Prisma.AssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  assignmentSubmissions?: Prisma.AssignmentSubmissionUncheckedUpdateManyWithoutOrganizationNestedInput
+  libraryBooks?: Prisma.LibraryBookUncheckedUpdateManyWithoutOrganizationNestedInput
+  bookIssues?: Prisma.BookIssueUncheckedUpdateManyWithoutOrganizationNestedInput
+  vehicles?: Prisma.VehicleUncheckedUpdateManyWithoutOrganizationNestedInput
+  transportAssignments?: Prisma.TransportAssignmentUncheckedUpdateManyWithoutOrganizationNestedInput
+  events?: Prisma.EventUncheckedUpdateManyWithoutOrganizationNestedInput
+  leaveRequests?: Prisma.LeaveRequestUncheckedUpdateManyWithoutOrganizationNestedInput
 }
 
 
@@ -1095,6 +3629,20 @@ export type OrganizationCountOutputType = {
   complaints: number
   notifications: number
   exams: number
+  grades: number
+  reportCards: number
+  fees: number
+  feePayments: number
+  timetables: number
+  assignments: number
+  assignmentSubmissions: number
+  libraryBooks: number
+  bookIssues: number
+  vehicles: number
+  transportAssignments: number
+  events: number
+  leaveRequests: number
+  salaries: number
 }
 
 export type OrganizationCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1105,6 +3653,20 @@ export type OrganizationCountOutputTypeSelect<ExtArgs extends runtime.Types.Exte
   complaints?: boolean | OrganizationCountOutputTypeCountComplaintsArgs
   notifications?: boolean | OrganizationCountOutputTypeCountNotificationsArgs
   exams?: boolean | OrganizationCountOutputTypeCountExamsArgs
+  grades?: boolean | OrganizationCountOutputTypeCountGradesArgs
+  reportCards?: boolean | OrganizationCountOutputTypeCountReportCardsArgs
+  fees?: boolean | OrganizationCountOutputTypeCountFeesArgs
+  feePayments?: boolean | OrganizationCountOutputTypeCountFeePaymentsArgs
+  timetables?: boolean | OrganizationCountOutputTypeCountTimetablesArgs
+  assignments?: boolean | OrganizationCountOutputTypeCountAssignmentsArgs
+  assignmentSubmissions?: boolean | OrganizationCountOutputTypeCountAssignmentSubmissionsArgs
+  libraryBooks?: boolean | OrganizationCountOutputTypeCountLibraryBooksArgs
+  bookIssues?: boolean | OrganizationCountOutputTypeCountBookIssuesArgs
+  vehicles?: boolean | OrganizationCountOutputTypeCountVehiclesArgs
+  transportAssignments?: boolean | OrganizationCountOutputTypeCountTransportAssignmentsArgs
+  events?: boolean | OrganizationCountOutputTypeCountEventsArgs
+  leaveRequests?: boolean | OrganizationCountOutputTypeCountLeaveRequestsArgs
+  salaries?: boolean | OrganizationCountOutputTypeCountSalariesArgs
 }
 
 /**
@@ -1166,6 +3728,104 @@ export type OrganizationCountOutputTypeCountExamsArgs<ExtArgs extends runtime.Ty
   where?: Prisma.ExamWhereInput
 }
 
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountGradesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.GradeWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountReportCardsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ReportCardWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountFeesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.FeeWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountFeePaymentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.FeePaymentWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountTimetablesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.TimetableWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountAssignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.AssignmentWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountAssignmentSubmissionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.AssignmentSubmissionWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountLibraryBooksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.LibraryBookWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountBookIssuesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.BookIssueWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountVehiclesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.VehicleWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountTransportAssignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.TransportAssignmentWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountEventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.EventWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountLeaveRequestsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.LeaveRequestWhereInput
+}
+
+/**
+ * OrganizationCountOutputType without action
+ */
+export type OrganizationCountOutputTypeCountSalariesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.SalaryWhereInput
+}
+
 
 export type OrganizationSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1181,6 +3841,20 @@ export type OrganizationSelect<ExtArgs extends runtime.Types.Extensions.Internal
   complaints?: boolean | Prisma.Organization$complaintsArgs<ExtArgs>
   notifications?: boolean | Prisma.Organization$notificationsArgs<ExtArgs>
   exams?: boolean | Prisma.Organization$examsArgs<ExtArgs>
+  grades?: boolean | Prisma.Organization$gradesArgs<ExtArgs>
+  reportCards?: boolean | Prisma.Organization$reportCardsArgs<ExtArgs>
+  fees?: boolean | Prisma.Organization$feesArgs<ExtArgs>
+  feePayments?: boolean | Prisma.Organization$feePaymentsArgs<ExtArgs>
+  timetables?: boolean | Prisma.Organization$timetablesArgs<ExtArgs>
+  assignments?: boolean | Prisma.Organization$assignmentsArgs<ExtArgs>
+  assignmentSubmissions?: boolean | Prisma.Organization$assignmentSubmissionsArgs<ExtArgs>
+  libraryBooks?: boolean | Prisma.Organization$libraryBooksArgs<ExtArgs>
+  bookIssues?: boolean | Prisma.Organization$bookIssuesArgs<ExtArgs>
+  vehicles?: boolean | Prisma.Organization$vehiclesArgs<ExtArgs>
+  transportAssignments?: boolean | Prisma.Organization$transportAssignmentsArgs<ExtArgs>
+  events?: boolean | Prisma.Organization$eventsArgs<ExtArgs>
+  leaveRequests?: boolean | Prisma.Organization$leaveRequestsArgs<ExtArgs>
+  salaries?: boolean | Prisma.Organization$salariesArgs<ExtArgs>
   _count?: boolean | Prisma.OrganizationCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["organization"]>
 
@@ -1220,6 +3894,20 @@ export type OrganizationInclude<ExtArgs extends runtime.Types.Extensions.Interna
   complaints?: boolean | Prisma.Organization$complaintsArgs<ExtArgs>
   notifications?: boolean | Prisma.Organization$notificationsArgs<ExtArgs>
   exams?: boolean | Prisma.Organization$examsArgs<ExtArgs>
+  grades?: boolean | Prisma.Organization$gradesArgs<ExtArgs>
+  reportCards?: boolean | Prisma.Organization$reportCardsArgs<ExtArgs>
+  fees?: boolean | Prisma.Organization$feesArgs<ExtArgs>
+  feePayments?: boolean | Prisma.Organization$feePaymentsArgs<ExtArgs>
+  timetables?: boolean | Prisma.Organization$timetablesArgs<ExtArgs>
+  assignments?: boolean | Prisma.Organization$assignmentsArgs<ExtArgs>
+  assignmentSubmissions?: boolean | Prisma.Organization$assignmentSubmissionsArgs<ExtArgs>
+  libraryBooks?: boolean | Prisma.Organization$libraryBooksArgs<ExtArgs>
+  bookIssues?: boolean | Prisma.Organization$bookIssuesArgs<ExtArgs>
+  vehicles?: boolean | Prisma.Organization$vehiclesArgs<ExtArgs>
+  transportAssignments?: boolean | Prisma.Organization$transportAssignmentsArgs<ExtArgs>
+  events?: boolean | Prisma.Organization$eventsArgs<ExtArgs>
+  leaveRequests?: boolean | Prisma.Organization$leaveRequestsArgs<ExtArgs>
+  salaries?: boolean | Prisma.Organization$salariesArgs<ExtArgs>
   _count?: boolean | Prisma.OrganizationCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type OrganizationIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1240,6 +3928,20 @@ export type $OrganizationPayload<ExtArgs extends runtime.Types.Extensions.Intern
     complaints: Prisma.$ComplaintPayload<ExtArgs>[]
     notifications: Prisma.$NotificationPayload<ExtArgs>[]
     exams: Prisma.$ExamPayload<ExtArgs>[]
+    grades: Prisma.$GradePayload<ExtArgs>[]
+    reportCards: Prisma.$ReportCardPayload<ExtArgs>[]
+    fees: Prisma.$FeePayload<ExtArgs>[]
+    feePayments: Prisma.$FeePaymentPayload<ExtArgs>[]
+    timetables: Prisma.$TimetablePayload<ExtArgs>[]
+    assignments: Prisma.$AssignmentPayload<ExtArgs>[]
+    assignmentSubmissions: Prisma.$AssignmentSubmissionPayload<ExtArgs>[]
+    libraryBooks: Prisma.$LibraryBookPayload<ExtArgs>[]
+    bookIssues: Prisma.$BookIssuePayload<ExtArgs>[]
+    vehicles: Prisma.$VehiclePayload<ExtArgs>[]
+    transportAssignments: Prisma.$TransportAssignmentPayload<ExtArgs>[]
+    events: Prisma.$EventPayload<ExtArgs>[]
+    leaveRequests: Prisma.$LeaveRequestPayload<ExtArgs>[]
+    salaries: Prisma.$SalaryPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1649,6 +4351,20 @@ export interface Prisma__OrganizationClient<T, Null = never, ExtArgs extends run
   complaints<T extends Prisma.Organization$complaintsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$complaintsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ComplaintPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   notifications<T extends Prisma.Organization$notificationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$notificationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NotificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   exams<T extends Prisma.Organization$examsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$examsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ExamPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  grades<T extends Prisma.Organization$gradesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$gradesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$GradePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  reportCards<T extends Prisma.Organization$reportCardsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$reportCardsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ReportCardPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  fees<T extends Prisma.Organization$feesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$feesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$FeePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  feePayments<T extends Prisma.Organization$feePaymentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$feePaymentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$FeePaymentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  timetables<T extends Prisma.Organization$timetablesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$timetablesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TimetablePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  assignments<T extends Prisma.Organization$assignmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$assignmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AssignmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  assignmentSubmissions<T extends Prisma.Organization$assignmentSubmissionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$assignmentSubmissionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AssignmentSubmissionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  libraryBooks<T extends Prisma.Organization$libraryBooksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$libraryBooksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LibraryBookPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  bookIssues<T extends Prisma.Organization$bookIssuesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$bookIssuesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BookIssuePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  vehicles<T extends Prisma.Organization$vehiclesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$vehiclesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VehiclePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  transportAssignments<T extends Prisma.Organization$transportAssignmentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$transportAssignmentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TransportAssignmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  events<T extends Prisma.Organization$eventsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$eventsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$EventPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  leaveRequests<T extends Prisma.Organization$leaveRequestsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$leaveRequestsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LeaveRequestPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  salaries<T extends Prisma.Organization$salariesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Organization$salariesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SalaryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2249,6 +4965,342 @@ export type Organization$examsArgs<ExtArgs extends runtime.Types.Extensions.Inte
   take?: number
   skip?: number
   distinct?: Prisma.ExamScalarFieldEnum | Prisma.ExamScalarFieldEnum[]
+}
+
+/**
+ * Organization.grades
+ */
+export type Organization$gradesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Grade
+   */
+  select?: Prisma.GradeSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Grade
+   */
+  omit?: Prisma.GradeOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.GradeInclude<ExtArgs> | null
+  where?: Prisma.GradeWhereInput
+  orderBy?: Prisma.GradeOrderByWithRelationInput | Prisma.GradeOrderByWithRelationInput[]
+  cursor?: Prisma.GradeWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.GradeScalarFieldEnum | Prisma.GradeScalarFieldEnum[]
+}
+
+/**
+ * Organization.reportCards
+ */
+export type Organization$reportCardsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the ReportCard
+   */
+  select?: Prisma.ReportCardSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the ReportCard
+   */
+  omit?: Prisma.ReportCardOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ReportCardInclude<ExtArgs> | null
+  where?: Prisma.ReportCardWhereInput
+  orderBy?: Prisma.ReportCardOrderByWithRelationInput | Prisma.ReportCardOrderByWithRelationInput[]
+  cursor?: Prisma.ReportCardWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ReportCardScalarFieldEnum | Prisma.ReportCardScalarFieldEnum[]
+}
+
+/**
+ * Organization.fees
+ */
+export type Organization$feesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Fee
+   */
+  select?: Prisma.FeeSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Fee
+   */
+  omit?: Prisma.FeeOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.FeeInclude<ExtArgs> | null
+  where?: Prisma.FeeWhereInput
+  orderBy?: Prisma.FeeOrderByWithRelationInput | Prisma.FeeOrderByWithRelationInput[]
+  cursor?: Prisma.FeeWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.FeeScalarFieldEnum | Prisma.FeeScalarFieldEnum[]
+}
+
+/**
+ * Organization.feePayments
+ */
+export type Organization$feePaymentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the FeePayment
+   */
+  select?: Prisma.FeePaymentSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the FeePayment
+   */
+  omit?: Prisma.FeePaymentOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.FeePaymentInclude<ExtArgs> | null
+  where?: Prisma.FeePaymentWhereInput
+  orderBy?: Prisma.FeePaymentOrderByWithRelationInput | Prisma.FeePaymentOrderByWithRelationInput[]
+  cursor?: Prisma.FeePaymentWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.FeePaymentScalarFieldEnum | Prisma.FeePaymentScalarFieldEnum[]
+}
+
+/**
+ * Organization.timetables
+ */
+export type Organization$timetablesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Timetable
+   */
+  select?: Prisma.TimetableSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Timetable
+   */
+  omit?: Prisma.TimetableOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.TimetableInclude<ExtArgs> | null
+  where?: Prisma.TimetableWhereInput
+  orderBy?: Prisma.TimetableOrderByWithRelationInput | Prisma.TimetableOrderByWithRelationInput[]
+  cursor?: Prisma.TimetableWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.TimetableScalarFieldEnum | Prisma.TimetableScalarFieldEnum[]
+}
+
+/**
+ * Organization.assignments
+ */
+export type Organization$assignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Assignment
+   */
+  select?: Prisma.AssignmentSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Assignment
+   */
+  omit?: Prisma.AssignmentOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.AssignmentInclude<ExtArgs> | null
+  where?: Prisma.AssignmentWhereInput
+  orderBy?: Prisma.AssignmentOrderByWithRelationInput | Prisma.AssignmentOrderByWithRelationInput[]
+  cursor?: Prisma.AssignmentWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.AssignmentScalarFieldEnum | Prisma.AssignmentScalarFieldEnum[]
+}
+
+/**
+ * Organization.assignmentSubmissions
+ */
+export type Organization$assignmentSubmissionsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the AssignmentSubmission
+   */
+  select?: Prisma.AssignmentSubmissionSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the AssignmentSubmission
+   */
+  omit?: Prisma.AssignmentSubmissionOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.AssignmentSubmissionInclude<ExtArgs> | null
+  where?: Prisma.AssignmentSubmissionWhereInput
+  orderBy?: Prisma.AssignmentSubmissionOrderByWithRelationInput | Prisma.AssignmentSubmissionOrderByWithRelationInput[]
+  cursor?: Prisma.AssignmentSubmissionWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.AssignmentSubmissionScalarFieldEnum | Prisma.AssignmentSubmissionScalarFieldEnum[]
+}
+
+/**
+ * Organization.libraryBooks
+ */
+export type Organization$libraryBooksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the LibraryBook
+   */
+  select?: Prisma.LibraryBookSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the LibraryBook
+   */
+  omit?: Prisma.LibraryBookOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.LibraryBookInclude<ExtArgs> | null
+  where?: Prisma.LibraryBookWhereInput
+  orderBy?: Prisma.LibraryBookOrderByWithRelationInput | Prisma.LibraryBookOrderByWithRelationInput[]
+  cursor?: Prisma.LibraryBookWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.LibraryBookScalarFieldEnum | Prisma.LibraryBookScalarFieldEnum[]
+}
+
+/**
+ * Organization.bookIssues
+ */
+export type Organization$bookIssuesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the BookIssue
+   */
+  select?: Prisma.BookIssueSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the BookIssue
+   */
+  omit?: Prisma.BookIssueOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.BookIssueInclude<ExtArgs> | null
+  where?: Prisma.BookIssueWhereInput
+  orderBy?: Prisma.BookIssueOrderByWithRelationInput | Prisma.BookIssueOrderByWithRelationInput[]
+  cursor?: Prisma.BookIssueWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.BookIssueScalarFieldEnum | Prisma.BookIssueScalarFieldEnum[]
+}
+
+/**
+ * Organization.vehicles
+ */
+export type Organization$vehiclesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Vehicle
+   */
+  select?: Prisma.VehicleSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Vehicle
+   */
+  omit?: Prisma.VehicleOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.VehicleInclude<ExtArgs> | null
+  where?: Prisma.VehicleWhereInput
+  orderBy?: Prisma.VehicleOrderByWithRelationInput | Prisma.VehicleOrderByWithRelationInput[]
+  cursor?: Prisma.VehicleWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.VehicleScalarFieldEnum | Prisma.VehicleScalarFieldEnum[]
+}
+
+/**
+ * Organization.transportAssignments
+ */
+export type Organization$transportAssignmentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the TransportAssignment
+   */
+  select?: Prisma.TransportAssignmentSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the TransportAssignment
+   */
+  omit?: Prisma.TransportAssignmentOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.TransportAssignmentInclude<ExtArgs> | null
+  where?: Prisma.TransportAssignmentWhereInput
+  orderBy?: Prisma.TransportAssignmentOrderByWithRelationInput | Prisma.TransportAssignmentOrderByWithRelationInput[]
+  cursor?: Prisma.TransportAssignmentWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.TransportAssignmentScalarFieldEnum | Prisma.TransportAssignmentScalarFieldEnum[]
+}
+
+/**
+ * Organization.events
+ */
+export type Organization$eventsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Event
+   */
+  select?: Prisma.EventSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Event
+   */
+  omit?: Prisma.EventOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.EventInclude<ExtArgs> | null
+  where?: Prisma.EventWhereInput
+  orderBy?: Prisma.EventOrderByWithRelationInput | Prisma.EventOrderByWithRelationInput[]
+  cursor?: Prisma.EventWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.EventScalarFieldEnum | Prisma.EventScalarFieldEnum[]
+}
+
+/**
+ * Organization.leaveRequests
+ */
+export type Organization$leaveRequestsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the LeaveRequest
+   */
+  select?: Prisma.LeaveRequestSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the LeaveRequest
+   */
+  omit?: Prisma.LeaveRequestOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.LeaveRequestInclude<ExtArgs> | null
+  where?: Prisma.LeaveRequestWhereInput
+  orderBy?: Prisma.LeaveRequestOrderByWithRelationInput | Prisma.LeaveRequestOrderByWithRelationInput[]
+  cursor?: Prisma.LeaveRequestWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.LeaveRequestScalarFieldEnum | Prisma.LeaveRequestScalarFieldEnum[]
+}
+
+/**
+ * Organization.salaries
+ */
+export type Organization$salariesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Salary
+   */
+  select?: Prisma.SalarySelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Salary
+   */
+  omit?: Prisma.SalaryOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.SalaryInclude<ExtArgs> | null
+  where?: Prisma.SalaryWhereInput
+  orderBy?: Prisma.SalaryOrderByWithRelationInput | Prisma.SalaryOrderByWithRelationInput[]
+  cursor?: Prisma.SalaryWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.SalaryScalarFieldEnum | Prisma.SalaryScalarFieldEnum[]
 }
 
 /**

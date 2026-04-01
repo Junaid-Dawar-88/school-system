@@ -12,6 +12,9 @@ function createPrismaClient() {
   const adapter = new PrismaNeonHttp(process.env.DATABASE_URL!, {
     arrayMode: false,
     fullResults: true,
+    fetchOptions: {
+      cache: "no-store",
+    },
   });
   return new PrismaClient({ adapter });
 }
